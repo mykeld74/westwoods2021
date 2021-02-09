@@ -1,4 +1,4 @@
-require("dotenv").config()
+require('dotenv').config()
 
 module.exports = {
   siteMetadata: {
@@ -10,10 +10,10 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     {
-      resolve: "gatsby-plugin-web-font-loader",
+      resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ["IBM Plex Sans", "Caveat", "Teko"],
+          families: ['IBM Plex Sans', 'Caveat', 'Teko'],
         },
       },
     },
@@ -35,13 +35,13 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-transformer-cloudinary",
+      resolve: 'gatsby-transformer-cloudinary',
       options: {
         cloudName: process.env.CLOUDINARY_CLOUD_NAME,
         apiKey: process.env.CLOUDINARY_API_KEY,
         apiSecret: process.env.CLOUDINARY_API_SECRET,
         // This folder will be created if it doesn’t exist.
-        uploadFolder: "WestwoodsCC",
+        uploadFolder: 'WestwoodsCC',
       },
     },
 
@@ -58,12 +58,10 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/ww-favicon.png`, // This path is relative to the root of the site.
       },
-      {
-        resolve: `gatsby-plugin-styled-components`,
-        options: {
-          // Add any options here
-        },
-      },
+    },
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {},
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
