@@ -112,6 +112,7 @@ const IndexPage = () => {
         <HeroBlock>
           <div>
             <h1>Westwoods Community Church</h1>
+            <h1>Obvious Change</h1>
             <MainMessage>
               <p>Join us in person or online!</p>
             </MainMessage>
