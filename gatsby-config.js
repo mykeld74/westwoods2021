@@ -35,6 +35,7 @@ module.exports = {
         apiSecret: process.env.CLOUDINARY_API_SECRET,
         // This folder will be created if it doesn’t exist.
         uploadFolder: 'WestwoodsCC',
+        enableDefaultTransformations: true,
       },
     },
 
