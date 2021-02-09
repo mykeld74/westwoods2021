@@ -1,7 +1,8 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
-import styled from "styled-components"
+import { Link } from 'gatsby'
+import PropTypes from 'prop-types'
+import React from 'react'
+import styled from 'styled-components'
+import Nav from './menu'
 
 const StyledHeader = styled.header`
   width: 100%;
@@ -10,13 +11,13 @@ const StyledHeader = styled.header`
   height: 50px;
   display: flex;
   align-items: center;
-  h1 {
-    font-size: clamp(16px, 2.5vw, 22px);
-    margin: 0;
-    font-weight: 400;
-  }
+  position: fixed;
+  z-index: 5;
 `
 const StyledLink = styled(Link)`
+  font-size: clamp(16px, 2.5vw, 22px);
+  margin: 0;
+  font-weight: 400;
   color: #fff;
   transition: all 0.25s ease-in-out;
   :hover {
@@ -27,10 +28,9 @@ const StyledLink = styled(Link)`
 const Header = ({ siteTitle }) => (
   <StyledHeader>
     <div>
-      <h1>
-        <StyledLink to="/">{siteTitle}</StyledLink>
-      </h1>
+      <StyledLink to="/">{siteTitle}</StyledLink>
     </div>
+    <Nav />
   </StyledHeader>
 )
 

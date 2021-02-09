@@ -1,11 +1,13 @@
-import React, { useState } from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import Image from "gatsby-image"
-import BackgroundImage from "gatsby-background-image"
-import styled from "styled-components"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Modal from "../components/modal"
+import React, { useState } from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
+import Image from 'gatsby-image'
+import BackgroundImage from 'gatsby-background-image'
+import styled from 'styled-components'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import Modal from '../components/modal'
+import LinkSection from '../components/homePageBlocks/linkSection'
+import WeAre from '../components/homePageBlocks/weAreSection'
 
 const BGContainer = styled(BackgroundImage)`
   min-height: calc(100vh - 85px);
@@ -19,7 +21,7 @@ const BGContainer = styled(BackgroundImage)`
 `
 
 const HeroBlock = styled.div`
-  height: calc(100vh - 50px);
+  height: 100vh;
   width: 100vw;
   display: flex;
   justify-content: space-around;
@@ -38,7 +40,7 @@ const MainMessage = styled.div`
   align-items: center;
   p {
     font-size: clamp(65px, 7vw, 95px);
-    font-family: "Teko", serif;
+    font-family: 'Teko', serif;
     font-weight: 700;
     line-height: 1;
   }
@@ -47,6 +49,7 @@ const MainMessage = styled.div`
 const Redline = styled(Image)`
   width: 80%;
   max-width: 600px;
+  margin: auto;
 `
 
 const Healthy = styled.div`
@@ -107,16 +110,20 @@ const IndexPage = () => {
       <SEO title="Home" />
       <BGContainer fluid={data.cityBg.childCloudinaryAsset.fluid}>
         <HeroBlock>
-          <h1>Westwoods Community Church</h1>
-          <MainMessage>
-            <p>Join Us in person or online!</p>
-          </MainMessage>
-          <Redline fluid={data.redline.childCloudinaryAsset.fluid} />
+          <div>
+            <h1>Westwoods Community Church</h1>
+            <MainMessage>
+              <p>Join us in person or online!</p>
+            </MainMessage>
+            <Redline fluid={data.redline.childCloudinaryAsset.fluid} />
+          </div>
         </HeroBlock>
       </BGContainer>
       <StayHealthy onClick={() => setIsSafetyVisible(true)}>
         <p>Click Here to learn how we are staying HEALTHY in the building!</p>
       </StayHealthy>
+      <LinkSection />
+      <WeAre />
       <Modal isVisible={isSafetyVisible} setIsVisible={setIsSafetyVisible}>
         <Healthy>
           <div className="black">
