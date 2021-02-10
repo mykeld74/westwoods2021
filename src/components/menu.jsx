@@ -154,6 +154,15 @@ const Nav = ({ setIsVisible }) => {
         <motion.div variants={navItem}>
           <NavLink to="/values">Values</NavLink>
         </motion.div>
+        <motion.div variants={navItem}>
+          <NavLink to="/mission">Mission</NavLink>
+        </motion.div>
+        <motion.div variants={navItem}>
+          <NavLink to="/vision">Vision</NavLink>
+        </motion.div>
+        <motion.div variants={navItem}>
+          <NavLink to="/what-we-believe">What We Believe</NavLink>
+        </motion.div>
       </Navigation>
     </>
   )
