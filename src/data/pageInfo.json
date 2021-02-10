@@ -85,5 +85,59 @@
       "desc": "Helps with the logistical and organizational aspects of the church.",
       "id": "15"
     }
+  ],
+  "facilities": [
+    {
+      "room": "Auditorium",
+      "features": [
+        "Seating for 200-400",
+        "Full sound, lighting and video options",
+        "Hanging lights and pallet backdrop"
+      ],
+      "id": "01"
+    },
+    {
+      "room": "The Workshop",
+      "features": [
+        "Multipurpose room with seating for up to 60 in rows or 45 at tables with room for a buffet, approximately",
+        "Mounted TV for presentations"
+      ],
+      "id": "02"
+    },
+    {
+      "room": "The Café",
+      "features": [
+        "Seating for up to 150 in rows or 100 at tables with room for a buffet, approximately",
+        "Mounted TV for presentations and sound system",
+        "In good weather, option of outside courtyard",
+        "Access to kitchen for food prep or storage"
+      ],
+      "id": "03"
+    },
+    {
+      "room": "The Coffeeshop",
+      "features": [
+        "Option of couches and high top tables and stools for casual seating, approximately 20 with space to move in more seating",
+        "Bar counter for easy serving"
+      ],
+      "id": "04"
+    },
+    {
+      "room": "Adult Classroom 1",
+      "features": [
+        "Conference table with seating for 10-12",
+        "White board for presentations",
+        "Optional TV on a cart"
+      ],
+      "id": "05"
+    },
+    {
+      "room": "Adult Classroom 2",
+      "features": [
+        "Multipurpose room for seating or tables",
+        "Optional TV on a cart"
+      ],
+      "id": "06"
+    }
   ]
 }

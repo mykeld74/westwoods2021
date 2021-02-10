@@ -1,42 +1,36 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import styled from 'styled-components'
-import Img from 'gatsby-image'
-import BackgroundImage from 'gatsby-background-image'
 import Layout from '../../components/layout'
 import SEO from '../../components/seo'
 import HeroBanner from '../../components/heroBanner'
-// import ContentBlock from '../components/contentBlock'
-
-import InfoBlock from '../../components/infoBlock'
-// import RentalFooter from "../components/rentalFooter"
-
-const ImgContainer = styled.div`
-  width: 100%;
-  max-width: 250px;
-  padding: 20px 0;
-`
-const StyledImg = styled(Img)`
-  width: 100%;
-`
-const ContentBlock = styled.div`
-  width: 100%;
-`
+import Container from '../../components/container'
+import RoomBlock from '../../components/roomBlock'
+import RentalFooter from '../../components/rentalFooter'
 
 const RoomPage = ({ data }) => (
   <Layout>
     <SEO title="Facility Rentals" />
-    <HeroBanner>
-      <ImgContainer>
-        <StyledImg fluid={data.wwLogo.childCloudinaryAsset.fluid} />
-      </ImgContainer>
-      <h1>Facility Rentals</h1>
+    <HeroBanner
+      backgroundImage={data.auditoriumBanner.childCloudinaryAsset.fluid}
+    >
+      <h1
+        style={{
+          width: '100%',
+          height: '100%',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          margin: 0,
+        }}
+      >
+        Facility Rentals
+      </h1>
     </HeroBanner>
 
-    <ContentBlock>
-      <InfoBlock info={data.dataJson.opportunities} />
-    </ContentBlock>
-    {/* <RentalFooter /> */}
+    <Container>
+      <RoomBlock room={data.dataJson.facilities} />
+    </Container>
+    <RentalFooter />
   </Layout>
 )
 
@@ -45,13 +39,13 @@ export default RoomPage
 export const query = graphql`
   query roomQuery {
     dataJson {
-      opportunities {
-        desc
-        time
-        title
+      facilities {
+        features
+        id
+        room
       }
     }
-    wwLogo: file(name: { eq: "wwLogo" }) {
+    auditoriumBanner: file(name: { eq: "auditoriumBanner" }) {
       childCloudinaryAsset {
         fluid {
           ...CloudinaryAssetFluid
