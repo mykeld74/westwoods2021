@@ -88,7 +88,7 @@ const WestwoodsStudents = () => {
               src="https://calendar.google.com/calendar/embed?src=studentswwcc%40gmail.com&amp;ctz=America%2FDenver"
               frameborder="0"
               scrolling="no"
-              class="studentCalendar"
+              className="studentCalendar"
               title="Student Calendar"
             ></iframe>
           </TextContainer>
