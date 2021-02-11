@@ -57,7 +57,7 @@ const ContactUs = () => {
         <h1>Contact Us</h1>
       </HeroBanner>
       <Container>
-        <p>
+        <p style={{ paddingTop: 20 }}>
           We would love to hear from you! If you would like to talk to someone
           or request prayer you can reach us at 303.279.1616. You can also
           complete the form below and someone will get back to you.
