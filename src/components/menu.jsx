@@ -77,6 +77,22 @@ const NavLink = styled(Link)`
     background-color: #333;
   }
 `
+const StyledLink = styled.a`
+  width: calc(100% - 30px);
+  border-radius: 3px;
+  display: block;
+  font-size: clamp(16px, 1.5vw, 22px);
+  color: #fff;
+  font-weight: 400;
+  padding-left: 10px;
+  margin: 10px 0;
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+  :hover {
+    color: #ddd;
+    background-color: #333;
+  }
+`
 
 const Category = styled(motion.p)`
   display: block;
@@ -99,7 +115,7 @@ const navAnimation = {
     x: 'calc(100vw - 325px)',
     transition: {
       duration: 0.33,
-      staggerChildren: 0.05,
+      staggerChildren: 0.025,
     },
   },
 }
@@ -107,13 +123,15 @@ const navAnimation = {
 const navItem = {
   open: {
     y: 0,
+    x: 0,
     opacity: 1,
     transition: {
       y: { stiffness: 1000, velocity: -100 },
     },
   },
   closed: {
-    y: 50,
+    y: 75,
+    x: 75,
     opacity: 0,
     transition: {
       y: { stiffness: 1000 },
@@ -175,6 +193,22 @@ const Nav = ({ setIsVisible }) => {
         </motion.div>
         <motion.div variants={navItem}>
           <NavLink to="/facility-rentals/weddings">Weddings</NavLink>
+        </motion.div>
+
+        <Category variants={navItem}>Have a Question</Category>
+        <motion.div variants={navItem}>
+          <NavLink to="/contact-us">Contact Us</NavLink>
+        </motion.div>
+
+        <Category variants={navItem}>Give</Category>
+        <motion.div variants={navItem}>
+          <StyledLink
+            href="https://westwoods.churchcenter.com/giving?open-in-church-center-modal=true"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Donate to Westwoods
+          </StyledLink>
         </motion.div>
       </Navigation>
     </>
