@@ -4,7 +4,7 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Modal from '../components/modal'
 import StyledLink from '../components/styledLink'
-// import ProgramsList from '../components/programsList'
+import ProgramList from '../components/programList'
 
 const VideoBG = styled.div`
   width: 100vw;
@@ -98,7 +98,8 @@ const WatchOnline = ({ data }) => {
       </VideoBG>
       <Modal isVisible={isProgramsVisible} setIsVisible={setIsProgramsVisibile}>
         <h4>Click below to view or download the program.</h4>
-        {/* <ProgramsList /> */}
+
+        <ProgramList />
       </Modal>
       <LinkContainer>
         <StyledLink onClick={() => setIsProgramsVisibile(true)}>

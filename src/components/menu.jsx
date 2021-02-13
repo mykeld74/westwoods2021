@@ -69,7 +69,7 @@ const NavLink = styled(Link)`
   color: #fff;
   font-weight: 400;
   padding-left: 10px;
-  margin: 10px 0;
+  margin: 8px 0;
   transition: all 0.25s ease-in-out;
   cursor: pointer;
   :hover {
@@ -158,6 +158,9 @@ const Nav = ({ setIsVisible }) => {
         <Category variants={navItem}>Our Groups</Category>
         <motion.div variants={navItem}>
           <NavLink to="/college-ministry">College Ministry</NavLink>
+        </motion.div>
+        <motion.div variants={navItem}>
+          <NavLink to="/lent-circles">Missional Communities</NavLink>
         </motion.div>
         <motion.div variants={navItem}>
           <NavLink to="/westwoods-kids">Westwoods Kids</NavLink>
