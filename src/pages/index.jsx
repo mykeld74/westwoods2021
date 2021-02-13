@@ -8,6 +8,7 @@ import SEO from '../components/seo'
 import Modal from '../components/modal'
 import LinkSection from '../components/homePageBlocks/linkSection'
 import WeAre from '../components/homePageBlocks/weAreSection'
+import WatchOnlineButton from '../components/watchOnlineButton'
 
 const BGContainer = styled(BackgroundImage)`
   min-height: calc(100vh - 85px);
@@ -21,7 +22,7 @@ const BGContainer = styled(BackgroundImage)`
 `
 
 const HeroBlock = styled.div`
-  height: 100vh;
+  height: calc(100vh - 50px);
   width: 100vw;
   display: flex;
   justify-content: space-around;
@@ -109,6 +110,7 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" />
       <BGContainer fluid={data.cityBg.childCloudinaryAsset.fluid}>
+        <WatchOnlineButton />
         <HeroBlock>
           <div>
             <h1>Westwoods Community Church</h1>

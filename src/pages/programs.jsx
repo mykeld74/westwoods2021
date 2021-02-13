@@ -28,7 +28,9 @@ const ProgramPage = ({ data }) => (
 
     <Container>
       <h3 style={{ marginTop: 20 }}>Get the programs for this series here!</h3>
-      <ProgramList programs={data.dataJson.programs} />
+      <div style={{ minHeight: '40vh' }}>
+        <ProgramList />
+      </div>
     </Container>
   </Layout>
 )
@@ -37,12 +39,6 @@ export default ProgramPage
 
 export const query = graphql`
   query ProgramQuery {
-    dataJson {
-      programs {
-        date
-        location
-      }
-    }
     wwLogo: file(name: { eq: "wwLogo" }) {
       childCloudinaryAsset {
         fluid {
