@@ -157,9 +157,6 @@ const Nav = ({ setIsVisible }) => {
 
         <Category variants={navItem}>Our Groups</Category>
         <motion.div variants={navItem}>
-          <NavLink to="/college-ministry">College Ministry</NavLink>
-        </motion.div>
-        <motion.div variants={navItem}>
           <NavLink to="/lent-circles">Missional Communities</NavLink>
         </motion.div>
         <motion.div variants={navItem}>
