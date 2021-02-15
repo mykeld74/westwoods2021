@@ -3,7 +3,6 @@ import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
-import SEO from '../components/seo'
 import HeroBanner from '../components/heroBanner'
 import Container from '../components/container'
 
@@ -19,8 +18,7 @@ const StyledImg = styled(Img)`
   width: 100%;
 `
 const VolunteerPage = ({ data }) => (
-  <Layout>
-    <SEO title="Volunteer Opportunities" />
+  <Layout pageTitle="Volunteer Opportunities">
     <HeroBanner>
       <ImgContainer>
         <StyledImg fluid={data.wwLogo.childCloudinaryAsset.fluid} />

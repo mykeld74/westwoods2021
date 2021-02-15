@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 import Image from 'gatsby-image'
 import styled from 'styled-components'
+import SEO from './seo'
 import Header from './header'
 import Modal from './modal'
 import './layout.scss'
@@ -52,7 +53,7 @@ const StyledButton = styled.button`
   }
 `
 
-const Layout = ({ children }) => {
+const Layout = ({ pageTitle, children }) => {
   const [isDirectionVisible, setIsDirectionVisible] = useState(false)
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -73,6 +74,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <SEO title={pageTitle} />
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <Container>
         <main>{children}</main>

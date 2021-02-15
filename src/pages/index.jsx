@@ -4,7 +4,6 @@ import Image from 'gatsby-image'
 import BackgroundImage from 'gatsby-background-image'
 import styled from 'styled-components'
 import Layout from '../components/layout'
-import SEO from '../components/seo'
 import Modal from '../components/modal'
 import LinkSection from '../components/homePageBlocks/linkSection'
 import WeAre from '../components/homePageBlocks/weAreSection'
@@ -107,8 +106,7 @@ const IndexPage = () => {
     }
   `)
   return (
-    <Layout>
-      <SEO title="Home" />
+    <Layout pageTitle="Home">
       <BGContainer fluid={data.cityBg.childCloudinaryAsset.fluid}>
         <WatchOnlineButton />
         <HeroBlock>

@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import Layout from '../../components/layout'
-import SEO from '../../components/seo'
 import Section from '../../components/section'
 import Container from '../../components/container'
 import WowFooter from '../../components/wowFooter'
@@ -43,8 +42,7 @@ const WomenOfWestwoods = () => {
     }
   `)
   return (
-    <Layout>
-      <SEO title="Women of Westwoods" />
+    <Layout pageTitle="Women of Westwoods">
       <div style={{ width: '100vw', padding: '3vh 5vw' }}>
         <ImgContainer>
           <Img fluid={data.wowLogo.childCloudinaryAsset.fluid} />

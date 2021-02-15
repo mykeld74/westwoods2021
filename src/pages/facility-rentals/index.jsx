@@ -1,15 +1,13 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../../components/layout'
-import SEO from '../../components/seo'
 import HeroBanner from '../../components/heroBanner'
 import Container from '../../components/container'
 import RoomBlock from '../../components/roomBlock'
 import RentalFooter from '../../components/rentalFooter'
 
 const RoomPage = ({ data }) => (
-  <Layout>
-    <SEO title="Facility Rentals" />
+  <Layout pageTitle="Facility Rentals">
     <HeroBanner
       backgroundImage={data.auditoriumBanner.childCloudinaryAsset.fluid}
     >

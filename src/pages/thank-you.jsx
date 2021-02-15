@@ -39,7 +39,7 @@ const ThankYou = () => {
     }
   `)
   return (
-    <Layout>
+    <Layout pageTitle="Thank You">
       <HeroBanner>
         <ImgContainer>
           <StyledImg fluid={data.wwLogo.childCloudinaryAsset.fluid} />

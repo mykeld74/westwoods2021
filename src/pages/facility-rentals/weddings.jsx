@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import { graphql } from 'gatsby'
 import Layout from '../../components/layout'
-import SEO from '../../components/seo'
 import HeroBanner from '../../components/heroBanner'
 import Container from '../../components/container'
 import RentalFooter from '../../components/rentalFooter'
@@ -13,8 +12,7 @@ const StyledUl = styled.ul`
 `
 
 const Weddings = ({ data }) => (
-  <Layout>
-    <SEO title="Weddings" />
+  <Layout pageTitle="Weddings">
     <HeroBanner
       backgroundImage={data.auditoriumBanner.childCloudinaryAsset.fluid}
     >

@@ -3,7 +3,6 @@ import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
 import Layout from '../components/layout'
-import SEO from '../components/seo'
 import HeroBanner from '../components/heroBanner'
 import Container from '../components/container'
 import Section from '../components/section'
@@ -62,8 +61,7 @@ const Believe = () => {
     }
   `)
   return (
-    <Layout>
-      <SEO title="What We Believe" />
+    <Layout pageTitle="What We Believe">
       <HeroBanner>
         <ImgContainer>
           <StyledImg fluid={data.wwLogo.childCloudinaryAsset.fluid} />

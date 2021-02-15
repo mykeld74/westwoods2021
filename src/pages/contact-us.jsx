@@ -49,7 +49,7 @@ const ContactUs = () => {
     }
   `)
   return (
-    <Layout>
+    <Layout pageTitle="Contact Us">
       <HeroBanner>
         <ImgContainer>
           <StyledImg fluid={data.wwLogo.childCloudinaryAsset.fluid} />
