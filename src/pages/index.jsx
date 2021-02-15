@@ -108,7 +108,6 @@ const IndexPage = () => {
   return (
     <Layout pageTitle="Home">
       <BGContainer fluid={data.cityBg.childCloudinaryAsset.fluid}>
-        <WatchOnlineButton />
         <HeroBlock>
           <div>
             <h1>Westwoods Community Church</h1>
@@ -124,6 +123,7 @@ const IndexPage = () => {
       </StayHealthy>
       <LinkSection />
       <WeAre />
+      <WatchOnlineButton />
       <Modal isVisible={isSafetyVisible} setIsVisible={setIsSafetyVisible}>
         <Healthy>
           <div className="black">

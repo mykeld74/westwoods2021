@@ -11,7 +11,7 @@ const OnlineButton = Styled.div`
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  z-index: 1;
+  z-index: 5000;
   display: flex;
   align-items: center;
   justify-content: center;
