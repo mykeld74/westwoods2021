@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import Layout from '../../components/layout'
-import SEO from '../../components/seo'
 import Section from '../../components/section'
 import Container from '../../components/container'
 import KidsFooter from '../../components/kidsFooter'
@@ -33,8 +32,7 @@ const WestwoodsKids = () => {
     }
   `)
   return (
-    <Layout>
-      <SEO title="Westwoods Kids" />
+    <Layout pageTitle="Westwoods Kids">
       <div style={{ width: '100vw', padding: '3vh 5vw' }}>
         <Img fluid={data.wwKids.childCloudinaryAsset.fluid} />
       </div>

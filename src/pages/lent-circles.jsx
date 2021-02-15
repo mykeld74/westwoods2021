@@ -3,7 +3,6 @@ import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
 import Layout from '../components/layout'
-import HeroBanner from '../components/heroBanner'
 import Container from '../components/container'
 import StyledLink from '../components/styledLink'
 
@@ -36,7 +35,7 @@ const CurrentSeries = () => {
     }
   `)
   return (
-    <Layout>
+    <Layout pageTitle="Lent Circles">
       <StyledImg fluid={data.lentCircles.childCloudinaryAsset.fluid} />
 
       <Container>

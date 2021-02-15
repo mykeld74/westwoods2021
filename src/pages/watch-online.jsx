@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import Layout from '../components/layout'
-import SEO from '../components/seo'
 import Modal from '../components/modal'
 import StyledLink from '../components/styledLink'
 import ProgramList from '../components/programList'
@@ -65,8 +64,7 @@ const TopLinksBlock = styled.div`
 const WatchOnline = ({ data }) => {
   const [isProgramsVisible, setIsProgramsVisibile] = useState(false)
   return (
-    <Layout>
-      <SEO title="Watch Online" />
+    <Layout pageTitle="Watch Online">
       <TopLinksBlock>
         <h2>View our previous videos.</h2>
         <LinkContainer>

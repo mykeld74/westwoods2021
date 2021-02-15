@@ -39,7 +39,7 @@ const CurrentSeries = () => {
     }
   `)
   return (
-    <Layout>
+    <Layout pageTitle="Current Series">
       <HeroBanner>
         <ImgContainer>
           <StyledImg fluid={data.wwLogo.childCloudinaryAsset.fluid} />
