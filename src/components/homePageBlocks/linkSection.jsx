@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import BackgroundImage from 'gatsby-background-image'
 import { graphql, useStaticQuery, Link } from 'gatsby'
+import Modal from '../modal'
+import DirectionModal from '../directionModal'
 
 const LinkContainer = styled.div`
   padding: 10px 0;
@@ -25,6 +27,7 @@ const LinkContainer = styled.div`
     cursor: pointer;
     p {
       font-size: clamp(22px, 2.5vw, 32px);
+      line-height: 1.4;
       text-shadow: 0 0 2px #0a0a0a;
       font-weight: 700;
       transition: color 0.3s ease-in-out;
@@ -59,40 +62,60 @@ const LinkSection = () => {
           }
         }
       }
+      building: file(name: { eq: "building" }) {
+        childCloudinaryAsset {
+          fluid {
+            ...CloudinaryAssetFluid
+          }
+        }
+      }
     }
   `)
+  const [isDirectionVisible, setIsDirectionVisible] = useState(false)
   return (
-    <LinkContainer>
-      <a
-        href="https://www.facebook.com/pg/WestwoodsCommunityChurch/videos/?ref=page_internal"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <LinkBlock
-          fluid={data.missSunday.childCloudinaryAsset.fluid}
-          className="missSunday linkBlock"
+    <>
+      <LinkContainer>
+        <a
+          href="https://www.facebook.com/pg/WestwoodsCommunityChurch/videos/?ref=page_internal"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <div>
-            <p>Miss a Sunday?</p>
-            <p>Watch it here.</p>
-          </div>
-        </LinkBlock>
-      </a>
-      <Link to="/current-series">
+          <LinkBlock
+            fluid={data.missSunday.childCloudinaryAsset.fluid}
+            className="missSunday linkBlock"
+          >
+            <div>
+              <p>
+                Miss a Sunday?
+                <br />
+                Watch it here.
+              </p>
+            </div>
+          </LinkBlock>
+        </a>
+        <Link to="/current-series">
+          <LinkBlock
+            fluid={data.currentSeries.childCloudinaryAsset.fluid}
+            className="linkBlock"
+          >
+            <p>Current Series</p>
+          </LinkBlock>
+        </Link>
         <LinkBlock
-          fluid={data.currentSeries.childCloudinaryAsset.fluid}
+          fluid={data.building.childCloudinaryAsset.fluid}
           className="linkBlock"
+          onClick={() => setIsDirectionVisible(true)}
         >
-          <p>Current Series</p>
+          <p>Service Times and Directions</p>
         </LinkBlock>
-      </Link>
-      {/* <LinkBlock
-    fluid={data.westwoodsBuilding.localFile.childImageSharp.fluid}
-    className="linkBlock"
-  >
-    <OurServices />
-  </LinkBlock> */}
-    </LinkContainer>
+      </LinkContainer>
+      <Modal
+        isVisible={isDirectionVisible}
+        setIsVisible={setIsDirectionVisible}
+      >
+        <DirectionModal />
+      </Modal>
+    </>
   )
 }
 
