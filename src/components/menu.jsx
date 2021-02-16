@@ -22,7 +22,7 @@ const Navigation = styled(motion.div)`
   height: auto;
   min-height: 100vh;
   background: #000;
-  z-index: 50;
+  z-index: 100;
   top: 0;
   padding: 70px 20px 0;
   color: #fff;
