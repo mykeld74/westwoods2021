@@ -28,9 +28,9 @@ const OnlineButton = Styled.div`
   }
   @media (max-width: 500px){
     top: auto;
-    bottom: 2vh;
-    right: 2vw;
-    left: auto;
+    top: 12vh;
+    right: auto;
+    left: 2vw;
     width: 75px;
     height: 75px;
   }
