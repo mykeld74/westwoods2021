@@ -71,6 +71,36 @@ const Healthy = styled.div`
     }
   }
 `
+
+const AlertBanner = styled.div`
+  background: #f00e0f;
+  color: #fff;
+  padding: 10px 10px 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  button {
+    position: absolute;
+    right: 2vw;
+    top: 2vh;
+    background: #f00e0f;
+    color: white;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    cursor: pointer;
+    p {
+      margin: 0;
+      padding: 0;
+      font-weight: 700;
+    }
+    @media (max-width: 400px) {
+      top: -30px;
+    }
+  }
+`
 const StayHealthy = styled.div`
   width: 100%;
   background: #f00e0f;
@@ -87,6 +117,7 @@ const StayHealthy = styled.div`
 
 const IndexPage = () => {
   const [isSafetyVisible, setIsSafetyVisible] = useState(false)
+  const [isBannerVisible, setIsBannerVisible] = useState(true)
   const data = useStaticQuery(graphql`
     query {
       cityBg: file(name: { eq: "cityBg" }) {
@@ -108,11 +139,26 @@ const IndexPage = () => {
   return (
     <Layout pageTitle="Home">
       <BGContainer fluid={data.cityBg.childCloudinaryAsset.fluid}>
+        {isBannerVisible && (
+          <AlertBanner>
+            <button onClick={() => setIsBannerVisible(false)}>
+              <p>&#10007;</p>
+            </button>
+            <h3>No in person service 03.14.21</h3>
+            <p>
+              With the pending weather alert we are opting not to have our in
+              person service but we hope that you will join us online as we
+              worship and learn together. And we hope to see you next week,
+              03.21.21!
+            </p>
+          </AlertBanner>
+        )}
         <HeroBlock>
           <div>
             <h1>Westwoods Community Church</h1>
             <MainMessage>
-              <p>Join us in person or online!</p>
+              {/* <p>Join us in person or online!</p> */}
+              <p>Join us online!</p>
             </MainMessage>
             <Redline fluid={data.redline.childCloudinaryAsset.fluid} />
           </div>
