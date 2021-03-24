@@ -200,6 +200,16 @@ const Nav = ({ setIsVisible }) => {
           <NavLink to="/contact-us">Contact Us</NavLink>
         </motion.div>
 
+        <Category variants={navItem}>Prayer</Category>
+        <motion.div variants={navItem}>
+          <StyledLink
+            href="https://docs.google.com/forms/d/e/1FAIpQLScjbhWqcpsjKnubkYgRQiX-rAsuNejM8AD2Bk2YzpAqdJh2Tw/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Submit a Prayer Request
+          </StyledLink>
+        </motion.div>
         <Category variants={navItem}>Give</Category>
         <motion.div variants={navItem}>
           <StyledLink
