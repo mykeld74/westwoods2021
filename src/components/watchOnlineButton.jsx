@@ -5,7 +5,7 @@ import { Link } from 'gatsby'
 const OnlineButton = Styled.div`
   position: fixed;
   top: 15vh;
-  right: 5vw;
+  left: 5vw;
   background: #ED2328;
   color: #fff;
   width: 100px;

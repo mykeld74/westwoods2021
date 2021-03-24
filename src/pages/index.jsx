@@ -163,8 +163,8 @@ const IndexPage = () => {
             </h3>
             <h4>Service</h4>
             <p>
-              <strong>9:00am</strong> will have limited seating for those who
-              desire to attend. There will be no kidzone available.
+              <strong>9:00am</strong> we are hosting our service both online and
+              in-person. We would love it if you would join us.
             </p>
             <p>
               <strong>10:45am</strong> will be online only
