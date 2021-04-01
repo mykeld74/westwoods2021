@@ -17,6 +17,13 @@ const StyledImg = styled(Img)`
 
 const Content = styled.div`
   padding: 3vh 0;
+  .topics {
+    margin-top: 3vh;
+    p {
+      margin-bottom: 0.5em;
+      padding: 0;
+    }
+  }
 `
 
 const CurrentSeries = () => {
@@ -29,7 +36,7 @@ const CurrentSeries = () => {
           }
         }
       }
-      currentSeriesLogo: file(name: { eq: "theWayOfJesus" }) {
+      currentSeriesLogo: file(name: { eq: "BecauseHeLives" }) {
         childCloudinaryAsset {
           fluid {
             ...CloudinaryAssetFluid
@@ -53,6 +60,20 @@ const CurrentSeries = () => {
           <StyledImg
             fluid={data.currentSeriesLogo.childCloudinaryAsset.fluid}
           />
+          <div className="topics">
+            <p>
+              <strong>4.11</strong> - Because Jesus Lives, I LIVE
+            </p>
+            <p>
+              <strong>4.18</strong> - Because Jesus Lives, I Have Hope
+            </p>
+            <p>
+              <strong>4.25</strong> - Because Jesus Lives, I Have Joy
+            </p>
+            <p>
+              <strong>5.2</strong> - Because Jesus Lives, I Have Purpose
+            </p>
+          </div>
         </Content>
       </Container>
     </Layout>
