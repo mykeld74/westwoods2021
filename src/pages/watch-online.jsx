@@ -87,7 +87,7 @@ const WatchOnline = ({ data }) => {
       <VideoBG>
         <StyledIframeContainer>
           <StyledIframe
-            src="https://embed.restream.io/player/index.html?token=re_1998974_8103c51a3c06c1cef216"
+            src="https://www.youtube.com/embed/7vbhw6415NY"
             frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
