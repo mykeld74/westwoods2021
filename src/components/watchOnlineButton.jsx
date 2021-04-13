@@ -1,6 +1,6 @@
 import React from 'react'
 import Styled from 'styled-components'
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
 
 const OnlineButton = Styled.div`
   position: fixed;
@@ -37,11 +37,20 @@ const OnlineButton = Styled.div`
 `
 
 const WatchOnline = () => (
-  <Link to="/watch-online">
+  // <Link to="/watch-online">
+  //   <OnlineButton>
+  //     <p>Watch Online</p>
+  //   </OnlineButton>
+  // </Link>
+  <a
+    href="https://www.youtube.com/channel/UCJkTcdfWk2DWGDuqJUOsrxA/featured"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
     <OnlineButton>
       <p>Watch Online</p>
     </OnlineButton>
-  </Link>
+  </a>
 )
 
 export default WatchOnline
