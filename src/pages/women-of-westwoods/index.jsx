@@ -43,7 +43,7 @@ const WomenOfWestwoods = () => {
   `)
   return (
     <Layout pageTitle="Women of Westwoods">
-      <div style={{ width: '100vw', padding: '3vh 5vw' }}>
+      <div style={{ width: '100vw', padding: '3vh 5vw', background: '#fff' }}>
         <ImgContainer>
           <Img fluid={data.wowLogo.childCloudinaryAsset.fluid} />
         </ImgContainer>
