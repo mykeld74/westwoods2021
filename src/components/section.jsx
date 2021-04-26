@@ -3,8 +3,8 @@ import React from 'react'
 const Section = ({ children, backgroundColor, fontColor }) => (
   <div
     style={{
-      background: backgroundColor || '#fff',
-      color: fontColor || '#000',
+      background: backgroundColor || `var(--base)`,
+      color: fontColor || `var(--baseColor)`,
     }}
   >
     {children}

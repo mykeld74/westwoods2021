@@ -16,8 +16,8 @@ const InfoContainer = Styled.div`
   }
   .infoTitle{
     width: 100%;
-    background: #000;
-    color: #fff;
+    background: var(--baseColor);
+    color: var(--base);
     padding: 10px 10px;
     margin-bottom: 10px;
     h2{
