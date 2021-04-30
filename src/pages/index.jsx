@@ -28,7 +28,7 @@ const HeroBlock = styled.div`
   align-items: center;
   flex-wrap: wrap;
   padding: 20vh 20px 35vh;
-
+  color: var(--baseColor);
   div {
     width: 100%;
   }
@@ -38,6 +38,7 @@ const MainMessage = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  color: var(--baseColor);
   p {
     font-size: clamp(65px, 7vw, 95px);
     font-family: 'Teko', serif;
@@ -60,7 +61,7 @@ const Healthy = styled.div`
     text-transform: uppercase;
   }
   .black {
-    background: #000;
+    background: var(--base);
     padding: 2vw;
   }
   .red {

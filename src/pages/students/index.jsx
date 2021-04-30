@@ -9,6 +9,7 @@ import Container from '../../components/container'
 const TextContainer = styled.div`
   text-align: center;
   padding: 3vw 0;
+
   h1,
   h2,
   h3 {
@@ -84,7 +85,7 @@ const WestwoodsStudents = () => {
             <iframe
               style={{ border: 0, marginTop: 20 }}
               src="https://calendar.google.com/calendar/embed?src=studentswwcc%40gmail.com&amp;ctz=America%2FDenver"
-              frameborder="0"
+              frameBorder="0"
               scrolling="no"
               className="studentCalendar"
               title="Student Calendar"

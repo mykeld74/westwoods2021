@@ -7,15 +7,21 @@ import SEO from './seo'
 import Header from './header'
 import Modal from './modal'
 import DirectionModal from './directionModal'
-import './layout.scss'
+import './layout.css'
 
 const Container = styled.div`
   padding-top: 50px;
+  background: var(--base);
+`
+
+const StyledMain = styled.main`
+  background: var(--base);
+  color: var(--baseColor);
 `
 
 const Footer = styled.footer`
-  background: #000;
-  color: #fff;
+  background: var(--headerFooter);
+  color: var(--baseColor);
   padding: 10px;
   display: flex;
   align-items: center;
@@ -42,7 +48,7 @@ const Footer = styled.footer`
 const StyledButton = styled.button`
   background: transparent;
   border: none;
-  color: #fff;
+  color: var(--baseColor);
   margin: 0;
   line-height: 2;
   font-size: 18px;
@@ -78,7 +84,7 @@ const Layout = ({ pageTitle, children }) => {
       <SEO title={pageTitle} />
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <Container>
-        <main>{children}</main>
+        <StyledMain>{children}</StyledMain>
         <Footer>
           <div className="footerLogoContainer">
             <Image fluid={data.wwLogo.childCloudinaryAsset.fluid} />

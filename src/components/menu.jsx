@@ -21,15 +21,15 @@ const Navigation = styled(motion.div)`
   position: fixed;
   height: auto;
   min-height: 100vh;
-  background: #000;
+  background: var(--base);
   z-index: 100;
   top: 0;
   padding: 70px 20px 0;
-  color: #fff;
+  color: var(--baseColor);
 `
 const CloseButton = styled.button`
-  background: #000;
-  color: #fff;
+  background: var(--headerFooter);
+  color: var(--baseColor);
   border-radius: 50%;
   border: none;
   font-size: 42px;
@@ -44,18 +44,18 @@ const CloseButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: left 0.33s ease-in-out;
+  transition: all 0.33s ease-in-out;
 
   &.close {
     left: 10px;
     width: 50px;
     height: 50px;
-    border: 2px solid #fff;
+    border: 2px solid var(--baseColor);
     border-radius: 50%;
   }
 `
 const StyledCloseButtonIcon = styled(FontAwesomeIcon)`
-  color: #fff;
+  color: var(--baseColor);
   margin: 0;
   padding: 0;
   font-size: 32px;
@@ -66,7 +66,7 @@ const NavLink = styled(Link)`
   border-radius: 3px;
   display: block;
   font-size: clamp(16px, 1.5vw, 22px);
-  color: #fff;
+  color: var(--baseColor);
   font-weight: 400;
   padding-left: 10px;
   margin: 8px 0;
@@ -82,7 +82,7 @@ const StyledLink = styled.a`
   border-radius: 3px;
   display: block;
   font-size: clamp(16px, 1.5vw, 22px);
-  color: #fff;
+  color: var(--baseColor);
   font-weight: 400;
   padding-left: 10px;
   margin: 10px 0;

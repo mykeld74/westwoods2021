@@ -1,15 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&family=Teko:wght@300;400;500;600;700&display=swap');
-html {
-  font-family: 'IBM Plex Sans', sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+
+:root {
+  --headerFooter: #000;
+  --base: #121212;
+  --baseColor: #fff;
+  transition: color 2s ease-in-out;
 }
 
+.lightMode {
+  --headerFooter: #efefef;
+  --base: #fff;
+  --baseColor: #000;
+}
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 10px;
+}
+html {
+  font-family: 'IBM Plex Sans', sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
 article,

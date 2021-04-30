@@ -10,7 +10,7 @@ const LinkContainer = styled.div`
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  background: #121212;
+  background: var(--base);
   /* @media (max-width: 768px) {
     grid-template-columns: 1fr;
   } */
