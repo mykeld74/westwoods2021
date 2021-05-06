@@ -36,7 +36,7 @@ const CurrentSeries = () => {
           }
         }
       }
-      currentSeriesLogo: file(name: { eq: "BecauseHeLives" }) {
+      currentSeriesLogo: file(name: { eq: "mothersHeart" }) {
         childCloudinaryAsset {
           fluid {
             ...CloudinaryAssetFluid
@@ -62,16 +62,18 @@ const CurrentSeries = () => {
           />
           <div className="topics">
             <p>
-              <strong>4.11</strong> - Because Jesus Lives, I LIVE
+              <strong>5.9</strong> - Straight from the Mother's Heart, Naomi
             </p>
             <p>
-              <strong>4.18</strong> - Because Jesus Lives, I Have Hope
+              <strong>5.16</strong> - Straight from the Mother's Heart,
+              Elizabeth
             </p>
             <p>
-              <strong>4.25</strong> - Because Jesus Lives, I Have Joy
+              <strong>5.23</strong> - Straight from the Mother's Heart, Hagar
             </p>
             <p>
-              <strong>5.2</strong> - Because Jesus Lives, I Have Purpose
+              <strong>5.30</strong> - Serve Our City Sunday - Join us as we
+              serve our community in a variety of ways!
             </p>
           </div>
         </Content>
