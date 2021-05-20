@@ -162,13 +162,10 @@ const IndexPage = () => {
             <h3 className="subtitle">
               Here is what we are doing in the building to stay healthy and open
             </h3>
-            <h4>Service</h4>
+            <h4>Service Time</h4>
             <p>
               <strong>9:00am</strong> we are hosting our service both online and
               in-person. We would love it if you would join us.
-            </p>
-            <p>
-              <strong>10:45am</strong> will be online only
             </p>
           </div>
           <div className="red">
@@ -179,13 +176,9 @@ const IndexPage = () => {
             </p>
             <h4>Masks</h4>
             <p>
-              Please wear masks inside until you get to your seat. Singing has
-              been shown to spread droplets way farther than 6 feet, so we are
-              asking people to wear masks while singing.
-            </p>
-            <p>
-              Before and after service we can't hang out inside. So, we are
-              asking everyone to move outside after services.
+              On Sunday, May 23, we will transition to a mask optional space in
+              accordance with the recent CDC, State and Jefferson County
+              guidelines.
             </p>
           </div>
         </Healthy>
