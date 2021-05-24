@@ -36,7 +36,7 @@ const CurrentSeries = () => {
           }
         }
       }
-      currentSeriesLogo: file(name: { eq: "mothersHeart" }) {
+      currentSeriesLogo: file(name: { eq: "MarkItUp" }) {
         childCloudinaryAsset {
           fluid {
             ...CloudinaryAssetFluid
@@ -61,19 +61,11 @@ const CurrentSeries = () => {
             fluid={data.currentSeriesLogo.childCloudinaryAsset.fluid}
           />
           <div className="topics">
+            <h3>Summer Series:</h3>
             <p>
-              <strong>5.9</strong> - Straight from the Mother's Heart, Naomi
-            </p>
-            <p>
-              <strong>5.16</strong> - Straight from the Mother's Heart,
-              Elizabeth
-            </p>
-            <p>
-              <strong>5.23</strong> - Straight from the Mother's Heart, Hagar
-            </p>
-            <p>
-              <strong>5.30</strong> - Serve Our City Sunday - Join us as we
-              serve our community in a variety of ways!
+              For June, July and August we will be exploring 1st and 2nd
+              Timothy. We hope you'll join us as we dig into these letters from
+              Paul to Timothy.
             </p>
           </div>
         </Content>

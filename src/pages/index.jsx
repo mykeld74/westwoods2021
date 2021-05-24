@@ -62,6 +62,7 @@ const Healthy = styled.div`
   }
   .black {
     background: var(--base);
+    color: var(--baseColor);
     padding: 2vw;
   }
   .red {
@@ -118,6 +119,7 @@ const StayHealthy = styled.div`
 
 const IndexPage = () => {
   const [isSafetyVisible, setIsSafetyVisible] = useState(false)
+  const [isServiceSundayVisible, setIsServiceSundayVisible] = useState(true)
   const data = useStaticQuery(graphql`
     query {
       cityBg: file(name: { eq: "cityBg" }) {
@@ -130,6 +132,13 @@ const IndexPage = () => {
       redline: file(name: { eq: "redline" }) {
         childCloudinaryAsset {
           fluid(maxWidth: 450) {
+            ...CloudinaryAssetFluid
+          }
+        }
+      }
+      soc: file(name: { eq: "soc" }) {
+        childCloudinaryAsset {
+          fluid(maxWidth: 800) {
             ...CloudinaryAssetFluid
           }
         }
@@ -162,13 +171,10 @@ const IndexPage = () => {
             <h3 className="subtitle">
               Here is what we are doing in the building to stay healthy and open
             </h3>
-            <h4>Service</h4>
+            <h4>Service Time</h4>
             <p>
               <strong>9:00am</strong> we are hosting our service both online and
               in-person. We would love it if you would join us.
-            </p>
-            <p>
-              <strong>10:45am</strong> will be online only
             </p>
           </div>
           <div className="red">
@@ -179,13 +185,31 @@ const IndexPage = () => {
             </p>
             <h4>Masks</h4>
             <p>
-              Please wear masks inside until you get to your seat. Singing has
-              been shown to spread droplets way farther than 6 feet, so we are
-              asking people to wear masks while singing.
+              On Sunday, May 23, we will transition to a mask optional space in
+              accordance with the recent CDC, State and Jefferson County
+              guidelines.
             </p>
+          </div>
+        </Healthy>
+        {/* <WestwoodsHealthy
+          fluid={data.WestwoodsHealthy.localFile.childImageSharp.fluid}
+        /> */}
+      </Modal>
+      <Modal
+        isVisible={isServiceSundayVisible}
+        setIsVisible={setIsServiceSundayVisible}
+      >
+        <Healthy>
+          <div className="black">
+            <Image fluid={data.soc.childCloudinaryAsset.fluid} />
+            <h1 className="title">Sunday, May 30th is Serve our City Sunday</h1>
             <p>
-              Before and after service we can't hang out inside. So, we are
-              asking everyone to move outside after services.
+              We won't be having a traditional service this day, but will
+              instead take the opportunity to do service projects in our
+              community. We will have several opportunities available at the
+              church beginning at 9:00am, but if you are unable to make it we
+              encourage you to take the opportunity in your neighborhood to do a
+              service project.
             </p>
           </div>
         </Healthy>
