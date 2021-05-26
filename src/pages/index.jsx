@@ -21,7 +21,7 @@ const BGContainer = styled(BackgroundImage)`
 `
 
 const HeroBlock = styled.div`
-  height: calc(100vh - 50px);
+  height: calc(100vh - 100px);
   width: 100vw;
   display: flex;
   justify-content: space-around;
@@ -116,10 +116,56 @@ const StayHealthy = styled.div`
     font-weight: 600;
   }
 `
+const KidsCamp = styled.div`
+  width: 100%;
+  background: #f00e0f;
+  cursor: pointer;
+  padding: 10px;
+  p {
+    text-align: center;
+    color: #fff;
+    font-size: clamp(18px, 2.5vw, 32px);
+    margin: 0;
+    font-weight: 600;
+  }
+`
+
+const KidsCampModal = styled.div`
+  p {
+    font-size: clamp(18px, 2.5vw, 24px);
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  .kcLogo {
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+  }
+  .regLink {
+    box-sizing: border-box;
+    background: #f00e0f;
+    border: 3px solid #f00e0f;
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px 0;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    font-size: clamp(22px, 2.5vw, 32px);
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+
+    :hover {
+      background: #fff;
+      color: #f00e0f;
+    }
+  }
+`
 
 const IndexPage = () => {
   const [isSafetyVisible, setIsSafetyVisible] = useState(false)
   const [isServiceSundayVisible, setIsServiceSundayVisible] = useState(true)
+  const [isKidsCampVisible, setIsKidsCampVisible] = useState(false)
   const data = useStaticQuery(graphql`
     query {
       cityBg: file(name: { eq: "cityBg" }) {
@@ -143,6 +189,13 @@ const IndexPage = () => {
           }
         }
       }
+      KidsCamp: file(name: { eq: "RockyRailway" }) {
+        childCloudinaryAsset {
+          fluid(maxWidth: 800) {
+            ...CloudinaryAssetFluid
+          }
+        }
+      }
     }
   `)
   return (
@@ -158,11 +211,15 @@ const IndexPage = () => {
           </div>
         </HeroBlock>
       </BGContainer>
+      <KidsCamp onClick={() => setIsKidsCampVisible(true)}>
+        <p>Kids Camp is coming...click here to learn more</p>
+      </KidsCamp>
+
+      <LinkSection />
+      <WeAre />
       <StayHealthy onClick={() => setIsSafetyVisible(true)}>
         <p>Click Here to learn how we are staying HEALTHY in the building!</p>
       </StayHealthy>
-      <LinkSection />
-      <WeAre />
       <WatchOnlineButton />
       <Modal isVisible={isSafetyVisible} setIsVisible={setIsSafetyVisible}>
         <Healthy>
@@ -216,6 +273,31 @@ const IndexPage = () => {
         {/* <WestwoodsHealthy
           fluid={data.WestwoodsHealthy.localFile.childImageSharp.fluid}
         /> */}
+      </Modal>
+      <Modal isVisible={isKidsCampVisible} setIsVisible={setIsKidsCampVisible}>
+        <KidsCampModal>
+          <div className="kcLogo">
+            <Image fluid={data.KidsCamp.childCloudinaryAsset.fluid} />
+          </div>
+          <p>
+            We are so excited to spend the week with your children at Kids Camp
+            2021!
+          </p>
+          <p>
+            A free week of games, crafts, and learning for children 4 years old
+            to 6th grade.
+          </p>
+          <p>
+            July 12-15, 2021 From 6-8 pm; with free community dinner at 5:30pm
+          </p>
+          <a
+            href="https://forms.gle/SkcCAZTyaghiVXDq9"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <p className="regLink">Register Here</p>
+          </a>
+        </KidsCampModal>
       </Modal>
     </Layout>
   )
