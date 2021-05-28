@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Styled from 'styled-components'
 import { Link } from 'gatsby'
 import KidsCampModal from './kidsCampModal'
@@ -74,11 +74,15 @@ const KidsButton = Styled.button`
 `
 
 const KidsFooter = () => {
-  const showKidsCampModal = window.sessionStorage.getItem('showKidsCamp')
-  const [isKidsCampVisible, setIsKidsCampVisible] = useState(
-    showKidsCampModal ? false : true
-  )
-  console.log({ showKidsCampModal })
+  const [isKidsCampVisible, setIsKidsCampVisible] = useState(true)
+  useEffect(() => {
+    const showKidsCampModal = window.sessionStorage.getItem('showKidsCamp')
+    if (showKidsCampModal) {
+      setIsKidsCampVisible(false)
+    } else {
+      setIsKidsCampVisible(true)
+    }
+  }, [])
   return (
     <>
       <KidsFooterContainer>
