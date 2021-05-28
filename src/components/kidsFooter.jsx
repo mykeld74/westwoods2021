@@ -109,7 +109,11 @@ const KidsFooter = () => {
           <p>Kids Camp Info</p>
         </KidsButton>
       </KidsFooterContainer>
-      <Modal isVisible={isKidsCampVisible} setIsVisible={setIsKidsCampVisible}>
+      <Modal
+        isVisible={isKidsCampVisible}
+        setIsVisible={setIsKidsCampVisible}
+        closeButtonType="showKidsCamp"
+      >
         <KidsCampModal />
       </Modal>
     </>
