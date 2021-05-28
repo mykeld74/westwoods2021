@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
@@ -6,6 +6,7 @@ import Layout from '../../components/layout'
 import Section from '../../components/section'
 import Container from '../../components/container'
 import KidsFooter from '../../components/kidsFooter'
+
 const TextContainer = styled.div`
   text-align: center;
   padding: 3vw 0;
@@ -20,6 +21,7 @@ const TextContainer = styled.div`
 `
 
 const WestwoodsKids = () => {
+  // const [isKidsCampVisible, setIsKidsCampVisible] = useState(true)
   const data = useStaticQuery(graphql`
     query {
       wwKids: file(name: { eq: "wwKidsBanner" }) {
@@ -90,6 +92,9 @@ const WestwoodsKids = () => {
         </Container>
       </Section>
       <KidsFooter />
+      {/* <Modal isVisible={isKidsCampVisible} setIsVisible={setIsKidsCampVisible}>
+        <KidsCampModal />
+      </Modal> */}
     </Layout>
   )
 }

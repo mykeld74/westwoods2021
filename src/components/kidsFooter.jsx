@@ -1,23 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Styled from 'styled-components'
 import { Link } from 'gatsby'
+import KidsCampModal from './kidsCampModal'
+import Modal from './modal'
 
 const KidsFooterContainer = Styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
+  gap: 20px;
   width: 100%;
+  
   background: #fff;
   margin: auto;
   border-top: 3px solid #fff;
   border-bottom: 3px solid #fff;
-  padding: 10px 0;
+  padding: 10px;
   @media (max-width: 478px){
     flex-wrap: wrap;
     justify-content: center;
   }
 `
 const KidsButton = Styled.button`
+    box-sizing: border-box;
     position: relative;
     display: flex;
     align-items: center;
@@ -27,13 +32,13 @@ const KidsButton = Styled.button`
     border: none;
     overflow: hidden;
     width: 100%;
-    min-width: 24vw;
+    min-width: 23.5vw;
     height: 80px;
     cursor: pointer;
     transition: all .3s ease-in-out;
     @media (max-width: 478px){
     margin: 10px auto;
-    min-width: 300px;
+    width: 300px;
   }
 
     p{
@@ -68,28 +73,39 @@ const KidsButton = Styled.button`
   }
 `
 
-const KidsFooter = () => (
-  <KidsFooterContainer>
-    <Link to="/westwoods-kids">
-      <KidsButton>
-        <p>Westwoods Kids Home</p>
-      </KidsButton>
-    </Link>
-    <Link to="/westwoods-kids/classes">
-      <KidsButton>
-        <p>Westwoods Kids Classes</p>
-      </KidsButton>
-    </Link>
-    <a
-      href="https://forms.gle/wX4ceuk6q98R9K1W7"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <KidsButton>
-        <p>Westwoods Kids Application</p>
-      </KidsButton>
-    </a>
-  </KidsFooterContainer>
-)
+const KidsFooter = () => {
+  const [isKidsCampVisible, setIsKidsCampVisible] = useState(true)
+  return (
+    <>
+      <KidsFooterContainer>
+        <Link to="/westwoods-kids">
+          <KidsButton>
+            <p>Westwoods Kids Home</p>
+          </KidsButton>
+        </Link>
+        <Link to="/westwoods-kids/classes">
+          <KidsButton>
+            <p>Westwoods Kids Classes</p>
+          </KidsButton>
+        </Link>
+        <a
+          href="https://forms.gle/wX4ceuk6q98R9K1W7"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <KidsButton>
+            <p>Westwoods Kids Application</p>
+          </KidsButton>
+        </a>
+        <KidsButton onClick={() => setIsKidsCampVisible(true)}>
+          <p>Kids Camp Info</p>
+        </KidsButton>
+      </KidsFooterContainer>
+      <Modal isVisible={isKidsCampVisible} setIsVisible={setIsKidsCampVisible}>
+        <KidsCampModal />
+      </Modal>
+    </>
+  )
+}
 
 export default KidsFooter
