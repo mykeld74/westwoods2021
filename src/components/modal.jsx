@@ -72,9 +72,15 @@ const ModalContent = Styled(motion.div)`
     }
   }
 `
-const Modal = ({ isVisible, setIsVisible, programs, children }) => {
+const Modal = ({
+  isVisible,
+  setIsVisible,
+  programs,
+  children,
+  closeButtonType = 'modal',
+}) => {
   const hasClosed = () => {
-    window.sessionStorage.setItem('showKidsCamp', 1)
+    window.sessionStorage.setItem(closeButtonType, 1)
   }
   return (
     <AnimatePresence>
