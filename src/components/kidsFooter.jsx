@@ -74,7 +74,11 @@ const KidsButton = Styled.button`
 `
 
 const KidsFooter = () => {
-  const [isKidsCampVisible, setIsKidsCampVisible] = useState(true)
+  const showKidsCampModal = window.sessionStorage.getItem('showKidsCamp')
+  const [isKidsCampVisible, setIsKidsCampVisible] = useState(
+    showKidsCampModal ? false : true
+  )
+  console.log({ showKidsCampModal })
   return (
     <>
       <KidsFooterContainer>

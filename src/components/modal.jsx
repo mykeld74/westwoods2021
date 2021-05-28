@@ -1,6 +1,6 @@
-import React from "react"
-import { AnimatePresence, motion } from "framer-motion"
-import Styled from "styled-components"
+import React from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
+import Styled from 'styled-components'
 
 const ModalContainer = Styled.div`
   width: 100vw;
@@ -73,6 +73,9 @@ const ModalContent = Styled(motion.div)`
   }
 `
 const Modal = ({ isVisible, setIsVisible, programs, children }) => {
+  const hasClosed = () => {
+    window.sessionStorage.setItem('showKidsCamp', 1)
+  }
   return (
     <AnimatePresence>
       {isVisible && (
@@ -85,12 +88,12 @@ const Modal = ({ isVisible, setIsVisible, programs, children }) => {
           />
 
           <ModalContent
-            initial={{ opacity: 0, y: "100vh" }}
-            animate={{ opacity: 1, y: "0" }}
-            exit={{ opacity: 0, y: "100vh" }}
+            initial={{ opacity: 0, y: '100vh' }}
+            animate={{ opacity: 1, y: '0' }}
+            exit={{ opacity: 0, y: '100vh' }}
             transition={{ duration: 0.5 }}
           >
-            <button onClick={() => setIsVisible(false)}>
+            <button onClick={() => (setIsVisible(false), hasClosed())}>
               <p>&#10007;</p>
             </button>
             {children}
