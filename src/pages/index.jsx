@@ -133,7 +133,6 @@ const KidsCamp = styled.div`
 
 const IndexPage = () => {
   const [isSafetyVisible, setIsSafetyVisible] = useState(false)
-  const [isServiceSundayVisible, setIsServiceSundayVisible] = useState(true)
   const [isKidsCampVisible, setIsKidsCampVisible] = useState(false)
   const data = useStaticQuery(graphql`
     query {
@@ -207,28 +206,6 @@ const IndexPage = () => {
               On Sunday, May 23, we will transition to a mask optional space in
               accordance with the recent CDC, State and Jefferson County
               guidelines.
-            </p>
-          </div>
-        </Healthy>
-        {/* <WestwoodsHealthy
-          fluid={data.WestwoodsHealthy.localFile.childImageSharp.fluid}
-        /> */}
-      </Modal>
-      <Modal
-        isVisible={isServiceSundayVisible}
-        setIsVisible={setIsServiceSundayVisible}
-      >
-        <Healthy>
-          <div className="black">
-            <Image fluid={data.soc.childCloudinaryAsset.fluid} />
-            <h1 className="title">Sunday, May 30th is Serve our City Sunday</h1>
-            <p>
-              We won't be having a traditional service this day, but will
-              instead take the opportunity to do service projects in our
-              community. We will have several opportunities available at the
-              church beginning at 9:00am, but if you are unable to make it we
-              encourage you to take the opportunity in your neighborhood to do a
-              service project.
             </p>
           </div>
         </Healthy>

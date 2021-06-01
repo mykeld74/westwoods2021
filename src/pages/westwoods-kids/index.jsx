@@ -21,7 +21,6 @@ const TextContainer = styled.div`
 `
 
 const WestwoodsKids = () => {
-  // const [isKidsCampVisible, setIsKidsCampVisible] = useState(true)
   const data = useStaticQuery(graphql`
     query {
       wwKids: file(name: { eq: "wwKidsBanner" }) {
