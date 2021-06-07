@@ -61,7 +61,7 @@ const KidsCampModal = () => {
       </p>
       <p>
         A free week of games, crafts, and learning for children 4 years old to
-        6th grade.
+        5th grade.
       </p>
       <p>July 12-15, 2021 From 6-8 pm; with free community dinner at 5:30pm</p>
       <a
