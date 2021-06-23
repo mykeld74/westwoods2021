@@ -49,10 +49,10 @@ const ToggleTheme = () => {
   return (
     <>
       <ThemeButton
-        onClick={() => (
-          setTheme(theme !== 'darkMode' ? 'darkMode' : 'lightMode'),
+        onClick={() => {
+          setTheme(theme !== 'darkMode' ? 'darkMode' : 'lightMode')
           setMode(theme !== 'darkMode' ? 'darkMode' : 'lightMode')
-        )}
+        }}
       >
         <div className="sliderButton"></div>
       </ThemeButton>

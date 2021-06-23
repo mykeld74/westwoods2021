@@ -12,7 +12,7 @@ const WeAreBlock = styled(BackgroundImage)`
   flex-wrap: wrap;
   padding: 30px 0;
   h1 {
-    color: #000;
+    color: #fff;
     text-align: center;
     width: 100%;
   }
@@ -55,7 +55,7 @@ const WeAreBlock = styled(BackgroundImage)`
 const WeAre = () => {
   const data = useStaticQuery(graphql`
     query {
-      remoteWorship: file(name: { eq: "remoteWorship" }) {
+      worship: file(name: { eq: "worship2021" }) {
         childCloudinaryAsset {
           fluid {
             ...CloudinaryAssetFluid
@@ -65,7 +65,7 @@ const WeAre = () => {
     }
   `)
   return (
-    <WeAreBlock fluid={data.remoteWorship.childCloudinaryAsset.fluid}>
+    <WeAreBlock fluid={data.worship.childCloudinaryAsset.fluid}>
       <h1>Westwoods is:</h1>
       <div className="westwoodsIs">
         <div className="weAre block1">

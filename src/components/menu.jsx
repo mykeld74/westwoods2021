@@ -19,7 +19,7 @@ const Navigation = styled(motion.div)`
   width: 100vw;
   max-width: 325px;
   position: fixed;
-  height: auto;
+  height: 100vh;
   min-height: 100vh;
   background: var(--base);
   z-index: 100;
@@ -27,6 +27,12 @@ const Navigation = styled(motion.div)`
   padding: 70px 20px 0;
   color: var(--baseColor);
 `
+const LinkContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+`
+
 const CloseButton = styled.button`
   background: var(--headerFooter);
   color: var(--baseColor);
@@ -154,72 +160,73 @@ const Nav = ({ setIsVisible }) => {
         <CloseButton onClick={toggle} className={isToggled ? 'close' : ''}>
           <StyledCloseButtonIcon icon={isToggled ? faTimes : faBars} />
         </CloseButton>
+        <LinkContainer>
+          <Category variants={navItem}>Our Groups</Category>
+          <motion.div variants={navItem}>
+            <NavLink to="/lent-circles">Missional Communities</NavLink>
+          </motion.div>
+          <motion.div variants={navItem}>
+            <NavLink to="/westwoods-kids">Westwoods Kids</NavLink>
+          </motion.div>
+          <motion.div variants={navItem}>
+            <NavLink to="/students">Westwoods Students</NavLink>
+          </motion.div>
+          <motion.div variants={navItem}>
+            <NavLink to="/women-of-westwoods">Women of Westwoods</NavLink>
+          </motion.div>
+          <Category variants={navItem}>About Us</Category>
+          <motion.div variants={navItem}>
+            <NavLink to="/values">Values</NavLink>
+          </motion.div>
+          <motion.div variants={navItem}>
+            <NavLink to="/mission">Mission</NavLink>
+          </motion.div>
+          <motion.div variants={navItem}>
+            <NavLink to="/vision">Vision</NavLink>
+          </motion.div>
+          <motion.div variants={navItem}>
+            <NavLink to="/volunteer-opportunities">
+              Volunteer Opportunities
+            </NavLink>
+          </motion.div>
+          <motion.div variants={navItem}>
+            <NavLink to="/what-we-believe">What We Believe</NavLink>
+          </motion.div>
 
-        <Category variants={navItem}>Our Groups</Category>
-        <motion.div variants={navItem}>
-          <NavLink to="/lent-circles">Missional Communities</NavLink>
-        </motion.div>
-        <motion.div variants={navItem}>
-          <NavLink to="/westwoods-kids">Westwoods Kids</NavLink>
-        </motion.div>
-        <motion.div variants={navItem}>
-          <NavLink to="/students">Westwoods Students</NavLink>
-        </motion.div>
-        <motion.div variants={navItem}>
-          <NavLink to="/women-of-westwoods">Women of Westwoods</NavLink>
-        </motion.div>
-        <Category variants={navItem}>About Us</Category>
-        <motion.div variants={navItem}>
-          <NavLink to="/values">Values</NavLink>
-        </motion.div>
-        <motion.div variants={navItem}>
-          <NavLink to="/mission">Mission</NavLink>
-        </motion.div>
-        <motion.div variants={navItem}>
-          <NavLink to="/vision">Vision</NavLink>
-        </motion.div>
-        <motion.div variants={navItem}>
-          <NavLink to="/volunteer-opportunities">
-            Volunteer Opportunities
-          </NavLink>
-        </motion.div>
-        <motion.div variants={navItem}>
-          <NavLink to="/what-we-believe">What We Believe</NavLink>
-        </motion.div>
+          <Category variants={navItem}>Building Usage</Category>
+          <motion.div variants={navItem}>
+            <NavLink to="/facility-rentals">Facility Rentals</NavLink>
+          </motion.div>
+          <motion.div variants={navItem}>
+            <NavLink to="/facility-rentals/weddings">Weddings</NavLink>
+          </motion.div>
 
-        <Category variants={navItem}>Building Usage</Category>
-        <motion.div variants={navItem}>
-          <NavLink to="/facility-rentals">Facility Rentals</NavLink>
-        </motion.div>
-        <motion.div variants={navItem}>
-          <NavLink to="/facility-rentals/weddings">Weddings</NavLink>
-        </motion.div>
+          <Category variants={navItem}>Have a Question</Category>
+          <motion.div variants={navItem}>
+            <NavLink to="/contact-us">Contact Us</NavLink>
+          </motion.div>
 
-        <Category variants={navItem}>Have a Question</Category>
-        <motion.div variants={navItem}>
-          <NavLink to="/contact-us">Contact Us</NavLink>
-        </motion.div>
-
-        <Category variants={navItem}>Prayer</Category>
-        <motion.div variants={navItem}>
-          <StyledLink
-            href="https://docs.google.com/forms/d/e/1FAIpQLScjbhWqcpsjKnubkYgRQiX-rAsuNejM8AD2Bk2YzpAqdJh2Tw/viewform"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Submit a Prayer Request
-          </StyledLink>
-        </motion.div>
-        <Category variants={navItem}>Give</Category>
-        <motion.div variants={navItem}>
-          <StyledLink
-            href="https://westwoods.churchcenter.com/giving?open-in-church-center-modal=true"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Donate to Westwoods
-          </StyledLink>
-        </motion.div>
+          <Category variants={navItem}>Prayer</Category>
+          <motion.div variants={navItem}>
+            <StyledLink
+              href="https://docs.google.com/forms/d/e/1FAIpQLScjbhWqcpsjKnubkYgRQiX-rAsuNejM8AD2Bk2YzpAqdJh2Tw/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Submit a Prayer Request
+            </StyledLink>
+          </motion.div>
+          <Category variants={navItem}>Give</Category>
+          <motion.div variants={navItem}>
+            <StyledLink
+              href="https://westwoods.churchcenter.com/giving?open-in-church-center-modal=true"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Donate to Westwoods
+            </StyledLink>
+          </motion.div>
+        </LinkContainer>
       </Navigation>
     </>
   )
