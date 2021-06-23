@@ -99,7 +99,12 @@ const Modal = ({
             exit={{ opacity: 0, y: '100vh' }}
             transition={{ duration: 0.5 }}
           >
-            <button onClick={() => (setIsVisible(false), hasClosed())}>
+            <button
+              onClick={() => {
+                setIsVisible(false)
+                hasClosed()
+              }}
+            >
               <p>&#10007;</p>
             </button>
             {children}

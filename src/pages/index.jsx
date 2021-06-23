@@ -45,6 +45,8 @@ const MainMessage = styled.div`
     font-family: 'Teko', serif;
     font-weight: 700;
     line-height: 1;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
+      1px 1px 0 #fff;
   }
 `
 
