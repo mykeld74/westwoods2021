@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import Styled from 'styled-components'
 import { Link } from 'gatsby'
-import KidsCampModal from './kidsCampModal'
-import Modal from './modal'
 
 const KidsFooterContainer = Styled.div`
   display: flex;
@@ -74,15 +72,14 @@ const KidsButton = Styled.button`
 `
 
 const KidsFooter = () => {
-  const [isKidsCampVisible, setIsKidsCampVisible] = useState(true)
-  useEffect(() => {
-    const showKidsCampModal = window.sessionStorage.getItem('showKidsCamp')
-    if (showKidsCampModal) {
-      setIsKidsCampVisible(false)
-    } else {
-      setIsKidsCampVisible(true)
-    }
-  }, [])
+  // useEffect(() => {
+  //   const showKidsCampModal = window.sessionStorage.getItem('showKidsCamp')
+  //   if (showKidsCampModal) {
+  //     setIsKidsCampVisible(false)
+  //   } else {
+  //     setIsKidsCampVisible(true)
+  //   }
+  // }, [])
   return (
     <>
       <KidsFooterContainer>
@@ -105,17 +102,7 @@ const KidsFooter = () => {
             <p>Westwoods Kids Application</p>
           </KidsButton>
         </a>
-        <KidsButton onClick={() => setIsKidsCampVisible(true)}>
-          <p>Kids Camp Info</p>
-        </KidsButton>
       </KidsFooterContainer>
-      <Modal
-        isVisible={isKidsCampVisible}
-        setIsVisible={setIsKidsCampVisible}
-        closeButtonType="showKidsCamp"
-      >
-        <KidsCampModal />
-      </Modal>
     </>
   )
 }

@@ -1,14 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import Image from 'gatsby-image'
 import BackgroundImage from 'gatsby-background-image'
 import styled from 'styled-components'
 import Layout from '../components/layout'
-import Modal from '../components/modal'
 import LinkSection from '../components/homePageBlocks/linkSection'
 import WeAre from '../components/homePageBlocks/weAreSection'
 import WatchOnlineButton from '../components/watchOnlineButton'
-import KidsCampModal from '../components/kidsCampModal'
 
 const BGContainer = styled(BackgroundImage)`
   min-height: calc(100vh - 85px);
@@ -22,7 +20,7 @@ const BGContainer = styled(BackgroundImage)`
 `
 
 const HeroBlock = styled.div`
-  height: calc(100vh - 100px);
+  height: calc(100vh - 50px);
   width: 100vw;
   display: flex;
   justify-content: space-around;
@@ -56,26 +54,26 @@ const Redline = styled(Image)`
   margin: auto;
 `
 
-const Healthy = styled.div`
-  h1,
-  h2,
-  h3,
-  h4 {
-    text-transform: uppercase;
-  }
-  .black {
-    background: var(--base);
-    color: var(--baseColor);
-    padding: 2vw;
-  }
-  .red {
-    background: #f00e0f;
-    padding: 2vw;
-    h4 {
-      margin: 0 0 10px 0;
-    }
-  }
-`
+// const Healthy = styled.div`
+//   h1,
+//   h2,
+//   h3,
+//   h4 {
+//     text-transform: uppercase;
+//   }
+//   .black {
+//     background: var(--base);
+//     color: var(--baseColor);
+//     padding: 2vw;
+//   }
+//   .red {
+//     background: #f00e0f;
+//     padding: 2vw;
+//     h4 {
+//       margin: 0 0 10px 0;
+//     }
+//   }
+// `
 
 // const AlertBanner = styled.div`
 //   background: #f00e0f;
@@ -106,36 +104,21 @@ const Healthy = styled.div`
 //     }
 //   }
 // `
-const StayHealthy = styled.div`
-  width: 100%;
-  background: #f00e0f;
-  cursor: pointer;
-  padding: 10px;
-  p {
-    text-align: center;
-    color: #fff;
-    font-size: clamp(18px, 2.5vw, 32px);
-    margin: 0;
-    font-weight: 600;
-  }
-`
-const KidsCamp = styled.div`
-  width: 100%;
-  background: #f00e0f;
-  cursor: pointer;
-  padding: 10px;
-  p {
-    text-align: center;
-    color: #fff;
-    font-size: clamp(18px, 2.5vw, 32px);
-    margin: 0;
-    font-weight: 600;
-  }
-`
+// const StayHealthy = styled.div`
+//   width: 100%;
+//   background: #f00e0f;
+//   cursor: pointer;
+//   padding: 10px;
+//   p {
+//     text-align: center;
+//     color: #fff;
+//     font-size: clamp(18px, 2.5vw, 32px);
+//     margin: 0;
+//     font-weight: 600;
+//   }
+// `
 
 const IndexPage = () => {
-  const [isSafetyVisible, setIsSafetyVisible] = useState(false)
-  const [isKidsCampVisible, setIsKidsCampVisible] = useState(false)
   const data = useStaticQuery(graphql`
     query {
       cityBg: file(name: { eq: "cityBg" }) {
@@ -174,17 +157,14 @@ const IndexPage = () => {
           </div>
         </HeroBlock>
       </BGContainer>
-      <KidsCamp onClick={() => setIsKidsCampVisible(true)}>
-        <p>Kids Camp is coming...click here to learn more</p>
-      </KidsCamp>
 
       <LinkSection />
       <WeAre />
-      <StayHealthy onClick={() => setIsSafetyVisible(true)}>
+      {/* <StayHealthy onClick={() => setIsSafetyVisible(true)}>
         <p>Click Here to learn how we are staying HEALTHY in the building!</p>
-      </StayHealthy>
+      </StayHealthy> */}
       <WatchOnlineButton />
-      <Modal isVisible={isSafetyVisible} setIsVisible={setIsSafetyVisible}>
+      {/* <Modal isVisible={isSafetyVisible} setIsVisible={setIsSafetyVisible}>
         <Healthy>
           <div className="black">
             <h1 className="title">Staying Healthy At Westwoods</h1>
@@ -211,13 +191,8 @@ const IndexPage = () => {
             </p>
           </div>
         </Healthy>
-        {/* <WestwoodsHealthy
-          fluid={data.WestwoodsHealthy.localFile.childImageSharp.fluid}
-        /> */}
-      </Modal>
-      <Modal isVisible={isKidsCampVisible} setIsVisible={setIsKidsCampVisible}>
-        <KidsCampModal />
-      </Modal>
+        
+      </Modal> */}
     </Layout>
   )
 }
