@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import Image from 'gatsby-image'
 import BackgroundImage from 'gatsby-background-image'
@@ -147,6 +147,16 @@ const IndexPage = () => {
     }
   `)
   const [isTwoServicesVisible, setIsTwoServicesVisible] = useState(true)
+
+  useEffect(() => {
+    const showTwoServices = window.sessionStorage.getItem('twoServices')
+    if (showTwoServices) {
+      setIsTwoServicesVisible(false)
+    } else {
+      setIsTwoServicesVisible(true)
+    }
+  }, [])
+
   return (
     <Layout pageTitle="Home">
       <BGContainer fluid={data.cityBg.childCloudinaryAsset.fluid}>
@@ -168,6 +178,7 @@ const IndexPage = () => {
       <Modal
         isVisible={isTwoServicesVisible}
         setIsVisible={setIsTwoServicesVisible}
+        closeButtonType="twoServices"
       >
         <TwoServices>
           <div className="black">

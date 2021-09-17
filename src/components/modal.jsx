@@ -90,7 +90,10 @@ const Modal = ({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            onClick={() => setIsVisible(false)}
+            onClick={() => {
+              setIsVisible(false)
+              hasClosed()
+            }}
           />
 
           <ModalContent
