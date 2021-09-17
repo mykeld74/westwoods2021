@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import Image from 'gatsby-image'
 import BackgroundImage from 'gatsby-background-image'
@@ -7,6 +7,7 @@ import Layout from '../components/layout'
 import LinkSection from '../components/homePageBlocks/linkSection'
 import WeAre from '../components/homePageBlocks/weAreSection'
 import WatchOnlineButton from '../components/watchOnlineButton'
+import Modal from '../components/modal'
 
 const BGContainer = styled(BackgroundImage)`
   min-height: calc(100vh - 85px);
@@ -54,26 +55,27 @@ const Redline = styled(Image)`
   margin: auto;
 `
 
-// const Healthy = styled.div`
-//   h1,
-//   h2,
-//   h3,
-//   h4 {
-//     text-transform: uppercase;
-//   }
-//   .black {
-//     background: var(--base);
-//     color: var(--baseColor);
-//     padding: 2vw;
-//   }
-//   .red {
-//     background: #f00e0f;
-//     padding: 2vw;
-//     h4 {
-//       margin: 0 0 10px 0;
-//     }
-//   }
-// `
+const TwoServices = styled.div`
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-transform: uppercase;
+  }
+  .black {
+    background: var(--base);
+    color: var(--baseColor);
+    padding: 2vw;
+  }
+  .red {
+    background: #f00e0f;
+    padding: 2vw;
+    h4 {
+      margin: 0 0 10px 0;
+    }
+  }
+  //
+`
 
 // const AlertBanner = styled.div`
 //   background: #f00e0f;
@@ -104,7 +106,7 @@ const Redline = styled(Image)`
 //     }
 //   }
 // `
-// const StayHealthy = styled.div`
+// const TwoServicesButton = styled.div`
 //   width: 100%;
 //   background: #f00e0f;
 //   cursor: pointer;
@@ -144,6 +146,7 @@ const IndexPage = () => {
       }
     }
   `)
+  const [isTwoServicesVisible, setIsTwoServicesVisible] = useState(true)
   return (
     <Layout pageTitle="Home">
       <BGContainer fluid={data.cityBg.childCloudinaryAsset.fluid}>
@@ -160,39 +163,31 @@ const IndexPage = () => {
 
       <LinkSection />
       <WeAre />
-      {/* <StayHealthy onClick={() => setIsSafetyVisible(true)}>
-        <p>Click Here to learn how we are staying HEALTHY in the building!</p>
-      </StayHealthy> */}
+
       <WatchOnlineButton />
-      {/* <Modal isVisible={isSafetyVisible} setIsVisible={setIsSafetyVisible}>
-        <Healthy>
+      <Modal
+        isVisible={isTwoServicesVisible}
+        setIsVisible={setIsTwoServicesVisible}
+      >
+        <TwoServices>
           <div className="black">
-            <h1 className="title">Staying Healthy At Westwoods</h1>
+            <h1 className="title">We're back to 2 services!</h1>
             <h3 className="subtitle">
-              Here is what we are doing in the building to stay healthy and open
+              It's been a while since we were able to have 2 services but the
+              time has come!
             </h3>
-            <h4>Service Time</h4>
+            <h4>Service Times</h4>
             <p>
-              <strong>9:00am</strong> we are hosting our service both online and
-              in-person. We would love it if you would join us.
+              <strong>9:00am</strong> we are hosting our service in-person only.
             </p>
+            <p>
+              <strong>10:30am</strong> we are hosting our service both online
+              and in-person.
+            </p>
+            <h3>We would love it if you would join us.</h3>
           </div>
-          <div className="red">
-            <h4>Seats</h4>
-            <p>
-              We have the seats spaced out for physical distancing, please leave
-              2 chairs between your party and another party.
-            </p>
-            <h4>Masks</h4>
-            <p>
-              On Sunday, May 23, we will transition to a mask optional space in
-              accordance with the recent CDC, State and Jefferson County
-              guidelines.
-            </p>
-          </div>
-        </Healthy>
-        
-      </Modal> */}
+        </TwoServices>
+      </Modal>
     </Layout>
   )
 }

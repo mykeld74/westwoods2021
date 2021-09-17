@@ -4,7 +4,7 @@ const DirectionModal = () => (
   <>
     <div style={{ width: '100%' }}>
       <h2>Join us this Sunday:</h2>
-      <h3>9:00am</h3>
+      <h3>9:00am and 10:30am</h3>
       <p>7700 Woodard Dr.</p>
       <p>Lakewood, CO 80227</p>
     </div>

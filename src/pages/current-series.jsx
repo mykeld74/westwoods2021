@@ -36,7 +36,7 @@ const CurrentSeries = () => {
           }
         }
       }
-      currentSeriesLogo: file(name: { eq: "MarkItUp" }) {
+      currentSeriesLogo: file(name: { eq: "promisesOfGod" }) {
         childCloudinaryAsset {
           fluid {
             ...CloudinaryAssetFluid
@@ -56,17 +56,14 @@ const CurrentSeries = () => {
       <Container>
         <Content>
           <h1>Join us Sunday mornings!</h1>
-          <h2>9:00am - Live in person and online</h2>
+          <h2>9:00am - Live in person</h2>
+          <h2>10:30am - Live in person and online</h2>
           <StyledImg
             fluid={data.currentSeriesLogo.childCloudinaryAsset.fluid}
           />
           <div className="topics">
-            <h3>Summer Series:</h3>
-            <p>
-              For June, July and August we will be exploring 1st and 2nd
-              Timothy. We hope you'll join us as we dig into these letters from
-              Paul to Timothy.
-            </p>
+            <h3>The Incredible Promises of God</h3>
+            <p>Join us as we explore all that God has for us.</p>
           </div>
           {/* <iframe
             width="560"
