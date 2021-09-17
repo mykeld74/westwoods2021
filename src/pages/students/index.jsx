@@ -32,7 +32,7 @@ const ImgContainer = styled.div`
 const WestwoodsStudents = () => {
   const data = useStaticQuery(graphql`
     query {
-      wwStudentLogo: file(name: { eq: "wwStudentLogo" }) {
+      wwStudentLogo: file(name: { eq: "studentsLogo" }) {
         childCloudinaryAsset {
           fluid(maxWidth: 2200) {
             ...CloudinaryAssetFluid
@@ -43,7 +43,7 @@ const WestwoodsStudents = () => {
   `)
   return (
     <Layout pageTitle="Westwoods Students">
-      <div style={{ width: '100vw', padding: '3vh 5vw', background: '#000' }}>
+      <div style={{ width: '100vw', padding: '3vh 5vw', background: '#ccc' }}>
         <ImgContainer>
           <Img fluid={data.wwStudentLogo.childCloudinaryAsset.fluid} />
         </ImgContainer>
@@ -58,7 +58,7 @@ const WestwoodsStudents = () => {
               believe and we seek to offer the environment where students can be
               themselves by connecting amazing adult leaders to come alongside
               each student over these formative years. We have weekly gatherings
-              during the school year on Sunday Evenings at 6:30 pm for fun,
+              during the school year on Monday Evenings at 6:30 pm for fun,
               connection, missional communities and to encourage the students in
               the way of Jesus in their lives with friends, family, at school,
               at home and ultimately who they are becoming.
