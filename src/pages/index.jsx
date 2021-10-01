@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import Image from 'gatsby-image'
 import BackgroundImage from 'gatsby-background-image'
@@ -7,7 +7,6 @@ import Layout from '../components/layout'
 import LinkSection from '../components/homePageBlocks/linkSection'
 import WeAre from '../components/homePageBlocks/weAreSection'
 import WatchOnlineButton from '../components/watchOnlineButton'
-import Modal from '../components/modal'
 
 const BGContainer = styled(BackgroundImage)`
   min-height: calc(100vh - 85px);
@@ -53,28 +52,6 @@ const Redline = styled(Image)`
   width: 80%;
   max-width: 600px;
   margin: auto;
-`
-
-const TwoServices = styled.div`
-  h1,
-  h2,
-  h3,
-  h4 {
-    text-transform: uppercase;
-  }
-  .black {
-    background: var(--base);
-    color: var(--baseColor);
-    padding: 2vw;
-  }
-  .red {
-    background: #f00e0f;
-    padding: 2vw;
-    h4 {
-      margin: 0 0 10px 0;
-    }
-  }
-  //
 `
 
 // const AlertBanner = styled.div`
@@ -146,16 +123,6 @@ const IndexPage = () => {
       }
     }
   `)
-  const [isTwoServicesVisible, setIsTwoServicesVisible] = useState(true)
-
-  useEffect(() => {
-    const showTwoServices = window.sessionStorage.getItem('twoServices')
-    if (showTwoServices) {
-      setIsTwoServicesVisible(false)
-    } else {
-      setIsTwoServicesVisible(true)
-    }
-  }, [])
 
   return (
     <Layout pageTitle="Home">
@@ -175,30 +142,6 @@ const IndexPage = () => {
       <WeAre />
 
       <WatchOnlineButton />
-      <Modal
-        isVisible={isTwoServicesVisible}
-        setIsVisible={setIsTwoServicesVisible}
-        closeButtonType="twoServices"
-      >
-        <TwoServices>
-          <div className="black">
-            <h1 className="title">We're back to 2 services!</h1>
-            <h3 className="subtitle">
-              It's been a while since we were able to have 2 services but the
-              time has come!
-            </h3>
-            <h4>Service Times</h4>
-            <p>
-              <strong>9:00am</strong> we are hosting our service in-person only.
-            </p>
-            <p>
-              <strong>10:30am</strong> we are hosting our service both online
-              and in-person.
-            </p>
-            <h3>We would love it if you would join us.</h3>
-          </div>
-        </TwoServices>
-      </Modal>
     </Layout>
   )
 }
