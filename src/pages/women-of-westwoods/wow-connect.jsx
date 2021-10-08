@@ -10,6 +10,7 @@ import WowFooter from '../../components/wowFooter'
 const TextContainer = styled.div`
   text-align: center;
   padding: 3vw 0 5vw;
+
   h1,
   h2,
   h3 {
@@ -17,9 +18,13 @@ const TextContainer = styled.div`
   }
   p {
     margin: 2vh 0 0;
+    line-height: 1.3;
   }
   &.left {
     text-align: left;
+  }
+  ul {
+    margin: 20px 0 20px 50px;
   }
 `
 
@@ -51,27 +56,29 @@ const WomenOfWestwoods = () => {
       <Section>
         <Container>
           <TextContainer className="left">
+            <h3>WoW Connect</h3>
             <p>
-              The Women's Ministry of Westwoods is an arm of the church that
-              provides opportunities for every woman to connect relationally, be
-              encouraged in their walk with Jesus, and equipped to impact their
-              world for the Kingdom. Whether it's through monthly Connect
-              events, mom gatherings, focusing on fitness, regular bible study,
-              praying together, holiday events, play dates, service
-              opportunities, tea and coffee chats, impromptu fun, mentor
-              meetings or parenting discussions, there is a place for YOU! Our
-              hope is that ladies will be encouraged and challenged by doing
-              life and building friendships!
+              Once a month we will create a space to gather as women to build
+              community around a different topic. All gatherings will be held at
+              Westwoods Community Church. Upcoming dates are:
             </p>
-
-            <p>All Women Welcome!</p>
+            <ul>
+              <li>10/19 at 6:30 PM</li>
+              <li>11/16 at 6:30 PM</li>
+              <li>11/16 at 6:30 PM</li>
+              <li>12/11 at TBD</li>
+            </ul>
 
             <p>
-              If you would to learn more or have any questions, please email us
-              at:{' '}
-              <a href="mailto:womenofwestwoods@gmail.com">
-                womenofwestwoods@gmail.com
-              </a>
+              October Connect on 10/19 will be brought to you by Kirsten Taylor
+              and her fitness ministry, Move in Love Ministries. This will be a
+              faith focused fitness night for women of every size, shape, age,
+              fitness and ability level. ALL are welcome. Don't count yourself
+              out! You won't want to miss this encouraging night of movement and
+              fun. Make sure to wear comfortable clothes, shoes you can move in,
+              a water bottle and a mat if you have one. We will not be offering
+              childcare but are hopeful with advance notice we can help everyone
+              find a way to come. Please reach out if you need assistance.
             </p>
           </TextContainer>
         </Container>
