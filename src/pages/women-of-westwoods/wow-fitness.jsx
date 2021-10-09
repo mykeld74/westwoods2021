@@ -10,16 +10,22 @@ import WowFooter from '../../components/wowFooter'
 const TextContainer = styled.div`
   text-align: center;
   padding: 3vw 0 5vw;
+
   h1,
   h2,
   h3 {
     margin: 0;
   }
-  p {
+  p,
+  h4 {
     margin: 2vh 0 0;
+    line-height: 1.3;
   }
   &.left {
     text-align: left;
+  }
+  ul {
+    margin: 20px 0 20px 50px;
   }
 `
 
@@ -51,26 +57,46 @@ const WomenOfWestwoods = () => {
       <Section>
         <Container>
           <TextContainer className="left">
+            <h3>Free Fitness Classes Available Every Week!</h3>
+
             <p>
-              The Women's Ministry of Westwoods is an arm of the church that
-              provides opportunities for every woman to connect relationally, be
-              encouraged in their walk with Jesus, and equipped to impact their
-              world for the Kingdom. Whether it's through monthly Connect
-              events, mom gatherings, focusing on fitness, regular bible study,
-              praying together, holiday events, play dates, service
-              opportunities, tea and coffee chats, impromptu fun, mentor
-              meetings or parenting discussions, there is a place for YOU! Our
-              hope is that ladies will be encouraged and challenged by doing
-              life and building friendships!
+              <strong>REFIT:</strong> A dance fitness format for everybody and
+              every BODY.
+            </p>
+            <p>
+              <strong>RevFit:</strong> A faith-infused drumstick class full of
+              fun and freedom! Bring your own drumsticks if you have them!
+            </p>
+            <p>
+              <strong>REV+FLOW:</strong> A low impact, high intensity format to
+              help make everyday tasks easier. Bring light weights and a mat if
+              you have them!
             </p>
 
-            <p>All Women Welcome!</p>
+            <h4>
+              There is something for eveyone. Bring a friend and Let's Move
+              Together!
+            </h4>
+
+            <h4>Schedule:</h4>
+            <p>
+              <strong>SATURDAYS:</strong>
+              <br />
+              8:00-9:00 AM - REFIT
+              <br />
+              9:00-10:00 AM - RevFit
+            </p>
 
             <p>
-              If you would to learn more or have any questions, please email us
-              at:{' '}
-              <a href="mailto:womenofwestwoods@gmail.com">
-                womenofwestwoods@gmail.com
+              <strong>TUESDAYS:</strong>
+              <br />
+              5:30-6:30 PM - REV+FLOW
+            </p>
+
+            <p>
+              Have more questions? Ask Kirsten Taylor at{' '}
+              <a href="mailto:denvertaylor13@gmail.com">
+                denvertaylor13@gmail.com
               </a>
             </p>
           </TextContainer>

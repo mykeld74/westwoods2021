@@ -163,7 +163,7 @@ const Nav = ({ setIsVisible }) => {
         <LinkContainer>
           <Category variants={navItem}>Our Groups</Category>
           <motion.div variants={navItem}>
-            <NavLink to="/lent-circles">Missional Communities</NavLink>
+            <NavLink to="/missional-communities">Missional Communities</NavLink>
           </motion.div>
           <motion.div variants={navItem}>
             <NavLink to="/westwoods-kids">Westwoods Kids</NavLink>
