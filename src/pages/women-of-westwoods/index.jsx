@@ -25,14 +25,26 @@ const TextContainer = styled.div`
 
 const ImgContainer = styled.div`
   width: calc(100% - 30px);
-  max-width: 550px;
+  max-width: 250px;
   margin: auto;
+  &.mealtrain {
+    width: calc(100% - 30px);
+    max-width: 350px;
+    margin: 20px 0;
+  }
 `
 
 const WomenOfWestwoods = () => {
   const data = useStaticQuery(graphql`
     query {
-      wowLogo: file(name: { eq: "wowLogo" }) {
+      wowLogo: file(name: { eq: "wowLogoNew" }) {
+        childCloudinaryAsset {
+          fluid(maxWidth: 600) {
+            ...CloudinaryAssetFluid
+          }
+        }
+      }
+      mealTrainLogo: file(name: { eq: "mealtrainLogo" }) {
         childCloudinaryAsset {
           fluid(maxWidth: 600) {
             ...CloudinaryAssetFluid
@@ -73,6 +85,28 @@ const WomenOfWestwoods = () => {
                 womenofwestwoods@gmail.com
               </a>
             </p>
+          </TextContainer>
+
+          <TextContainer className="left">
+            <p>
+              Life happens! We get to be the part of peoples happiest and
+              hardest moments as we do life with them. As a community, we want
+              to be an on-going resource to help in life's big moments. We are
+              creating an on-going meal train crew sign up. If you would like to
+              be someone to potentially prepare and drop off a meal for someone
+              in need, please add your info to this google form:
+            </p>
+
+            <a
+              href="https://forms.gle/dpUAMn7w3Ngwgazg9"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <ImgContainer className="mealtrain">
+                <Img fluid={data.mealTrainLogo.childCloudinaryAsset.fluid} />
+              </ImgContainer>
+              <p>https://forms.gle/dpUAMn7w3Ngwgazg9</p>
+            </a>
           </TextContainer>
         </Container>
       </Section>

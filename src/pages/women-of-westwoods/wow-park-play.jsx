@@ -14,7 +14,7 @@ const TextContainer = styled.div`
   h1,
   h2,
   h3 {
-    margin: 0;
+    margin: 0 0 20px;
   }
   p {
     margin: 2vh 0 0;
@@ -25,6 +25,10 @@ const TextContainer = styled.div`
   }
   ul {
     margin: 20px 0 20px 50px;
+    &.left {
+      text-align: left;
+      margin-left: 10vw;
+    }
   }
 `
 
@@ -55,30 +59,30 @@ const WomenOfWestwoods = () => {
       </div>
       <Section>
         <Container>
-          <TextContainer className="left">
-            <h3>WoW Connect</h3>
-            <p>
-              Once a month we will create a space to gather as women to build
-              community around a different topic. All gatherings will be held at
-              Westwoods Community Church. Upcoming dates are:
-            </p>
-            <ul>
-              <li>10/19 at 6:30 PM</li>
-              <li>11/16 at 6:30 PM</li>
-              <li>11/16 at 6:30 PM</li>
-              <li>12/11 at TBD</li>
+          <TextContainer>
+            <h2>Meet Us at the Park!</h2>
+            <h3>
+              A playground playdate for parents and caretakers of littles to
+              connect. Invite your friends!
+            </h3>
+            <h3>
+              Every 2ND and 4TH Wednesday <br />
+              <span>Weather Permitting</span>
+            </h3>
+
+            <ul className="left">
+              <li>10/13 -- Lakewood Park</li>
+              <li>
+                10/27 -- Front Porch Coffee (playground on the north side of the
+                church)
+              </li>
+              <li>11/10 -- Carmody</li>
+              <li>12/8 -- Front Porch Coffee</li>
             </ul>
 
             <p>
-              October Connect on 10/19 will be brought to you by Kirsten Taylor
-              and her fitness ministry, Move in Love Ministries. This will be a
-              faith focused fitness night for women of every size, shape, age,
-              fitness and ability level. ALL are welcome. Don't count yourself
-              out! You won't want to miss this encouraging night of movement and
-              fun. Make sure to wear comfortable clothes, shoes you can move in,
-              a water bottle and a mat if you have one. We will not be offering
-              childcare but are hopeful with advance notice we can help everyone
-              find a way to come. Please reach out if you need assistance.
+              Park outings are from 9:30-11:00 and are lead by Sarah Brooks. For
+              more information, text her at 970-260-5331.
             </p>
           </TextContainer>
         </Container>
