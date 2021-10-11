@@ -26,7 +26,7 @@ const MC = () => {
           }
         }
       }
-      lentCircles: file(name: { eq: "mc" }) {
+      mc: file(name: { eq: "mc" }) {
         childCloudinaryAsset {
           fluid(maxWidth: 2200) {
             ...CloudinaryAssetFluid
@@ -37,7 +37,7 @@ const MC = () => {
   `)
   return (
     <Layout pageTitle="Missional Communties">
-      <StyledImg fluid={data.lentCircles.childCloudinaryAsset.fluid} />
+      <StyledImg fluid={data.mc.childCloudinaryAsset.fluid} />
 
       <Container>
         <Content>
