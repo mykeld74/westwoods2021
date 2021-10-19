@@ -36,7 +36,7 @@ const CurrentSeries = () => {
           }
         }
       }
-      currentSeriesLogo: file(name: { eq: "promisesOfGod" }) {
+      currentSeriesLogo: file(name: { eq: "sots" }) {
         childCloudinaryAsset {
           fluid {
             ...CloudinaryAssetFluid
@@ -62,8 +62,7 @@ const CurrentSeries = () => {
             fluid={data.currentSeriesLogo.childCloudinaryAsset.fluid}
           />
           <div className="topics">
-            <h3>The Incredible Promises of God</h3>
-            <p>Join us as we explore all that God has for us.</p>
+            <h3>Seasons of the Soul</h3>
           </div>
           {/* <iframe
             width="560"
