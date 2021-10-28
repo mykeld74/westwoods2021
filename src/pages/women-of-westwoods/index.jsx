@@ -76,7 +76,9 @@ const WomenOfWestwoods = () => {
               life and building friendships!
             </p>
 
-            <p>All Women Welcome!</p>
+            <p>
+              <strong>All Women Welcome!</strong>
+            </p>
 
             <p>
               If you would to learn more or have any questions, please email us
@@ -85,9 +87,7 @@ const WomenOfWestwoods = () => {
                 womenofwestwoods@gmail.com
               </a>
             </p>
-          </TextContainer>
 
-          <TextContainer className="left">
             <p>
               Life happens! We get to be the part of peoples happiest and
               hardest moments as we do life with them. As a community, we want

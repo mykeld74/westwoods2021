@@ -2,6 +2,10 @@ import React from 'react'
 import Styled from 'styled-components'
 import { Link } from 'gatsby'
 
+const StyledP = Styled.p`
+  margin: 0 0 5px 20px;
+  `
+
 const WowFooterContainer = Styled.div`
   width: 100%;
   display: flex;
@@ -41,6 +45,7 @@ const WowLink = Styled.div`
 
 const WowFooter = () => (
   <>
+    <StyledP>Click on any of the links below to learn more:</StyledP>
     <WowFooterContainer>
       <WowLink>
         <Link to="/women-of-westwoods">
@@ -68,6 +73,27 @@ const WowFooter = () => (
             />
           </svg>
           <p>WoW Connect</p>
+        </Link>
+      </WowLink>
+      <WowLink>
+        <Link to="/women-of-westwoods/prayer-gatherings">
+          <svg
+            viewBox="0 0 302 254"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="wowSvg"
+          >
+            <title>Prayer Gatherings</title>
+            <path
+              className="wowIcon"
+              d="M133.103 91.9744C123.662 88.5832 113.249 93.4954 109.862 102.942L98.9884 133.251L97.8984 114.573L132.279 19.0767C134.586 12.7023 131.818 5.46372 125.615 2.33325C118.911 -1.05299 110.737 1.6365 107.351 8.34027L59.141 103.767C58.1094 105.828 57.5016 108.222 57.5016 110.687L57.7567 182.495L13.4541 205.755C1.16532 212.208 -3.56535 227.396 2.88328 239.679C9.34111 251.967 24.5237 256.698 36.8119 250.245L118.695 207.247L120.57 206.265C126.057 203.34 130.188 197.997 131.317 191.387L144.88 112.139C146.343 103.609 141.534 94.9969 133.103 91.9744Z"
+            />
+            <path
+              className="wowIcon"
+              d="M288.546 205.754L244.244 182.494L244.499 110.686C244.499 108.221 243.891 105.828 242.859 103.766L194.651 8.33945C191.264 1.63567 183.089 -1.0532 176.386 2.33242C170.183 5.46289 167.415 12.7009 169.722 19.0759L204.103 114.573L203.013 133.25L192.14 102.941C188.753 93.4952 178.339 88.5824 168.898 91.9735C160.467 94.9967 155.658 103.609 157.12 112.138L170.684 191.386C171.813 197.996 175.944 203.34 181.431 206.265L183.306 207.247L265.189 250.244C277.477 256.697 292.66 251.966 299.118 239.678C305.565 227.395 300.835 212.208 288.546 205.754Z"
+            />
+          </svg>
+          <p>Prayer Gatherings</p>
         </Link>
       </WowLink>
       <WowLink>
