@@ -57,28 +57,38 @@ const WomenOfWestwoods = () => {
         <Container>
           <TextContainer className="left">
             <h3>WoW Connect</h3>
+            <h4>
+              Because supportive social relationships are essential to human
+              thriving!{' '}
+            </h4>
             <p>
               Once a month we will create a space to gather as women to build
               community around a different topic. All gatherings will be held at
               Westwoods Community Church. Upcoming dates are:
             </p>
             <ul>
-              <li>10/19 at 6:30 PM</li>
-              <li>11/16 at 6:30 PM</li>
-              <li>11/16 at 6:30 PM</li>
-              <li>12/11 at TBD</li>
+              <li>Tuesday - 11/16 at 6:30 PM</li>
+              <li>Saturday - 12/11 at 10:00 AM</li>
+              <li>Tuesday - 1/18 at 6:30 PM</li>
             </ul>
+            <p>
+              November Connect on 11/16 we will focus on Gratitude! What's in
+              our life that we often take for granted? How can we appreciate
+              what have?
+            </p>
+            <p>Why does being thankful help?</p>
+            <p>Join us for a fun, encouraging evening, and bring a friend!</p>
 
             <p>
-              October Connect on 10/19 will be brought to you by Kirsten Taylor
-              and her fitness ministry, Move in Love Ministries. This will be a
-              faith focused fitness night for women of every size, shape, age,
-              fitness and ability level. ALL are welcome. Don't count yourself
-              out! You won't want to miss this encouraging night of movement and
-              fun. Make sure to wear comfortable clothes, shoes you can move in,
-              a water bottle and a mat if you have one. We will not be offering
-              childcare but are hopeful with advance notice we can help everyone
-              find a way to come. Please reach out if you need assistance.
+              Tuesday, November 16th.
+              <br />
+              6:30 -8:00 PM
+              <br />
+              Westwoods Coffee Shop
+              <br />
+              Childcare will not be available but we are hopeful with advance
+              notice we can help everyone find a way to come. Please reach out
+              if you need assistance.
             </p>
           </TextContainer>
         </Container>
