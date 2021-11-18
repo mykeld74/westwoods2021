@@ -77,11 +77,6 @@ const WomenOfWestwoods = () => {
             <p className="left">
               <strong>3rd Thursday of the Month - 6:30pm</strong> -
               Adoptive/Foster Moms (and those raising a relative) at Westwoods.
-              <br />
-              <em>
-                *Please note November's meeting will be held on Wednesday,
-                November 17th.
-              </em>
             </p>
             <p className="left">
               For more information about either of these gatherings please
