@@ -36,7 +36,7 @@ const CurrentSeries = () => {
           }
         }
       }
-      currentSeriesLogo: file(name: { eq: "sots" }) {
+      currentSeriesLogo: file(name: { eq: "ac" }) {
         childCloudinaryAsset {
           fluid {
             ...CloudinaryAssetFluid
@@ -56,13 +56,13 @@ const CurrentSeries = () => {
       <Container>
         <Content>
           <h1>Join us Sunday mornings!</h1>
-          <h2>9:00am - Live in person</h2>
-          <h2>10:30am - Live in person and online</h2>
+          <h2>9:00am - 10:30am Live in person and online</h2>
           <StyledImg
             fluid={data.currentSeriesLogo.childCloudinaryAsset.fluid}
           />
           <div className="topics">
-            <h3>Seasons of the Soul</h3>
+            <h3>Advent Conspiracy</h3>
+            <h4>Spend Less, Give More, Love All, Worship Fully!</h4>
           </div>
           {/* <iframe
             width="560"
