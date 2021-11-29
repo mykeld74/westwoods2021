@@ -54,35 +54,39 @@ const Redline = styled(Image)`
   margin: auto;
 `
 
-// const AlertBanner = styled.div`
-//   background: #f00e0f;
-//   color: #fff;
-//   padding: 10px 10px 0;
-//   position: absolute;
-//   bottom: 0;
-//   left: 0;
-//   width: 100%;
-//   button {
-//     position: absolute;
-//     right: 2vw;
-//     top: 2vh;
-//     background: #f00e0f;
-//     color: white;
-//     height: 40px;
-//     width: 40px;
-//     border-radius: 50%;
-//     border: 2px solid #fff;
-//     cursor: pointer;
-//     p {
-//       margin: 0;
-//       padding: 0;
-//       font-weight: 700;
-//     }
-//     @media (max-width: 400px) {
-//       top: -30px;
-//     }
-//   }
-// `
+const NotificationBanner = styled.div`
+  background: #f00e0f;
+  color: #fff;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  p {
+    text-align: center;
+    font-size: clamp(20px, 7vw, 30px);
+    font-weight: 700;
+    line-height: 1.1;
+  }
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    font-size: clamp(18px, 4vw, 26px);
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    font-weight: 700;
+    border: 3px solid #fff;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background: #f00e0f;
+      color: #fff;
+    }
+  }
+`
 // const TwoServicesButton = styled.div`
 //   width: 100%;
 //   background: #f00e0f;
@@ -137,6 +141,20 @@ const IndexPage = () => {
           </div>
         </HeroBlock>
       </BGContainer>
+      <NotificationBanner>
+        <p>
+          Join us in Advent Conspiracy as we Spend Less, Give More, Love All,
+          Worship Fully!
+        </p>
+        <a
+          href="https://ac.westwoodscc.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button"
+        >
+          Learn More
+        </a>
+      </NotificationBanner>
 
       <LinkSection />
       <WeAre />
