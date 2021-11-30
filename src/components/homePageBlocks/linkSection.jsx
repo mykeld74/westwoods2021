@@ -76,7 +76,7 @@ const LinkSection = () => {
     <>
       <LinkContainer>
         <a
-          href="https://www.facebook.com/pg/WestwoodsCommunityChurch/videos/?ref=page_internal"
+          href="https://www.youtube.com/channel/UCJkTcdfWk2DWGDuqJUOsrxA/playlists"
           target="_blank"
           rel="noopener noreferrer"
         >
