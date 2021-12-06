@@ -20,12 +20,14 @@ const StyledMain = styled.main`
 `
 
 const Footer = styled.footer`
+  position: relative;
   background: var(--headerFooter);
   color: var(--baseColor);
   padding: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 1;
   @media (max-width: 468px) {
     flex-wrap: wrap;
   }
