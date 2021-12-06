@@ -33,11 +33,49 @@ const ImgContainer = styled.div`
   max-width: 250px;
   margin: auto;
 `
+const WowBrunch = styled.div`
+  width: 90%;
+  max-width: 650px;
+  margin: 15px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  background: #0b1230;
+  padding: 15px;
+  border-radius: 10px;
+  .wowBrunchImage {
+    width: 100%;
+  }
+  .wowBrunchText {
+    padding: 20px;
+    background: #e1332c;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 8px;
+  }
+  p {
+    font-size: 26px;
+    font-weight: 900;
+    color: #fff;
+  }
+  .wowBrunchTextTitle {
+    margin: 0 0 25px 0;
+  }
+`
 
 const WomenOfWestwoods = () => {
   const data = useStaticQuery(graphql`
     query {
       wowLogo: file(name: { eq: "wowLogoNew" }) {
+        childCloudinaryAsset {
+          fluid(maxWidth: 600) {
+            ...CloudinaryAssetFluid
+          }
+        }
+      }
+      wowBrunch: file(name: { eq: "WoWBrunch" }) {
         childCloudinaryAsset {
           fluid(maxWidth: 600) {
             ...CloudinaryAssetFluid
@@ -66,29 +104,26 @@ const WomenOfWestwoods = () => {
               community around a different topic. All gatherings will be held at
               Westwoods Community Church. Upcoming dates are:
             </p>
-            <ul>
-              <li>Tuesday - 11/16 at 6:30 PM</li>
-              <li>Saturday - 12/11 at 10:00 AM</li>
-              <li>Tuesday - 1/18 at 6:30 PM</li>
-            </ul>
-            <p>
-              November Connect on 11/16 we will focus on Gratitude! What's in
-              our life that we often take for granted? How can we appreciate
-              what have?
-            </p>
-            <p>Why does being thankful help?</p>
-            <p>Join us for a fun, encouraging evening, and bring a friend!</p>
+            <WowBrunch>
+              <div className="wowBrunchImage">
+                <Img fluid={data.wowBrunch.childCloudinaryAsset.fluid} />
+              </div>
+              <div className="wowBrunchText">
+                <p className="wowBrunchTextTitle">
+                  Ladies we hope you will join us and bring a friend!!
+                </p>
+                <p>
+                  Saturday
+                  <br /> December 11th
+                  <br />
+                  10am
+                </p>
+              </div>
+            </WowBrunch>
 
             <p>
-              Tuesday, November 16th.
-              <br />
-              6:30 -8:00 PM
-              <br />
-              Westwoods Coffee Shop
-              <br />
-              Childcare will not be available but we are hopeful with advance
-              notice we can help everyone find a way to come. Please reach out
-              if you need assistance.
+              Our next event will be Tuesday, 1/18/22 at 6:30pm stay tuned for
+              details!
             </p>
           </TextContainer>
         </Container>
