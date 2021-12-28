@@ -54,7 +54,7 @@ const CurrentSeries = () => {
           }
         }
       }
-      currentSeriesLogo: file(name: { eq: "ac" }) {
+      currentSeriesLogo: file(name: { eq: "Mark_WIJR" }) {
         childCloudinaryAsset {
           fluid {
             ...CloudinaryAssetFluid
@@ -79,8 +79,14 @@ const CurrentSeries = () => {
             fluid={data.currentSeriesLogo.childCloudinaryAsset.fluid}
           />
           <div className="topics">
-            <h3>Advent Conspiracy</h3>
-            <h4>Spend Less, Give More, Love All, Worship Fully!</h4>
+            <h3>Who is Jesus Really</h3>
+            <h4>1.2 - Mark 1</h4>
+            <h4>1.9 - Mark 2</h4>
+            <h4>1.16 - Mark 3</h4>
+            <h4>1.24 - Mark 4</h4>
+            <h4>1.30 - Mark 5</h4>
+            <h4>2.6 - Mark 6</h4>
+            <h4>2.13 - Mark 7</h4>
           </div>
           <p>Watch the current series here:</p>
           <CurrentSeriesVideo>
