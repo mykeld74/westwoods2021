@@ -7,7 +7,6 @@ import Layout from '../components/layout'
 import LinkSection from '../components/homePageBlocks/linkSection'
 import WeAre from '../components/homePageBlocks/weAreSection'
 import WatchOnlineButton from '../components/watchOnlineButton'
-import Modal from '../components/modal'
 
 const BGContainer = styled(BackgroundImage)`
   min-height: calc(100vh - 85px);
@@ -55,69 +54,37 @@ const Redline = styled(Image)`
   margin: auto;
 `
 
-const NoServiceBanner = styled.div`
-  background: #f00e0f;
-  color: #fff;
-  padding: 20px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  cursor: pointer;
-  p {
-    text-align: center;
-    font-size: clamp(20px, 7vw, 30px);
-    font-weight: 700;
-    line-height: 1.1;
-    margin: 0;
-  }
-`
-
-const NotificationBanner = styled.div`
-  background: #f00e0f;
-  color: #fff;
-  padding: 20px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  p {
-    text-align: center;
-    font-size: clamp(20px, 7vw, 30px);
-    font-weight: 700;
-    line-height: 1.1;
-  }
-  .button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #fff;
-    font-size: clamp(18px, 4vw, 26px);
-    width: 200px;
-    height: 40px;
-    border-radius: 5px;
-    font-weight: 700;
-    border: 3px solid #fff;
-    transition: all 0.3s ease-in-out;
-    &:hover {
-      background: #f00e0f;
-      color: #fff;
-    }
-  }
-`
-// const TwoServicesButton = styled.div`
-//   width: 100%;
+// const NotificationBanner = styled.div`
 //   background: #f00e0f;
-//   cursor: pointer;
-//   padding: 10px;
+//   color: #fff;
+//   padding: 20px;
+//   width: 100%;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-direction: column;
 //   p {
 //     text-align: center;
-//     color: #fff;
-//     font-size: clamp(18px, 2.5vw, 32px);
-//     margin: 0;
-//     font-weight: 600;
+//     font-size: clamp(20px, 7vw, 30px);
+//     font-weight: 700;
+//     line-height: 1.1;
+//   }
+//   .button {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     background: #fff;
+//     font-size: clamp(18px, 4vw, 26px);
+//     width: 200px;
+//     height: 40px;
+//     border-radius: 5px;
+//     font-weight: 700;
+//     border: 3px solid #fff;
+//     transition: all 0.3s ease-in-out;
+//     &:hover {
+//       background: #f00e0f;
+//       color: #fff;
+//     }
 //   }
 // `
 
@@ -157,9 +124,6 @@ const IndexPage = () => {
 
   return (
     <Layout pageTitle="Home">
-      <NoServiceBanner onClick={() => setIsDec26Visibile(true)}>
-        <p>Please note: We will not have Sunday service on December 26th</p>
-      </NoServiceBanner>
       <BGContainer fluid={data.cityBg.childCloudinaryAsset.fluid}>
         <HeroBlock>
           <div>
@@ -172,37 +136,10 @@ const IndexPage = () => {
         </HeroBlock>
       </BGContainer>
 
-      <NotificationBanner>
-        <p>
-          Join us in Advent Conspiracy as we Spend Less, Give More, Love All,
-          Worship Fully!
-        </p>
-        <a
-          href="https://ac.westwoodscc.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="button"
-        >
-          Learn More
-        </a>
-      </NotificationBanner>
-
       <LinkSection />
       <WeAre />
 
       <WatchOnlineButton />
-      <Modal
-        isVisible={isDec26Visibile}
-        setIsVisible={setIsDec26Visibile}
-        closeButtonType="noService"
-      >
-        <h2>Please Note:</h2>
-        <h3>
-          We will not have our church services on Sunday December 26th. Please
-          join us for our Christmas Eve services at 3:30 and 5:00pm. We can't
-          wait to worship with you in 2022!
-        </h3>
-      </Modal>
     </Layout>
   )
 }
