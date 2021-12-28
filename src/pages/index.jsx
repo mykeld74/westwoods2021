@@ -89,13 +89,6 @@ const Redline = styled(Image)`
 // `
 
 const IndexPage = () => {
-  const [isDec26Visibile, setIsDec26Visibile] = useState(true)
-  //set use effect to check if session storage has been set
-  useEffect(() => {
-    if (window.sessionStorage.getItem('noService') === '1') {
-      setIsDec26Visibile(false)
-    }
-  }, [])
   const data = useStaticQuery(graphql`
     query {
       cityBg: file(name: { eq: "cityBg" }) {
