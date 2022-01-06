@@ -29,11 +29,9 @@ const Content = styled.div`
 const CurrentSeriesVideo = styled.div`
   box-sizing: border-box;
   position: relative;
-  width: calc(100% - 20px);
-  max-width: 500px;
   .videoContainer {
     width: 100%;
-    padding-bottom: 56.25%;
+    aspect-ratio: 16/9;
   }
   iframe {
     position: absolute;
@@ -43,6 +41,8 @@ const CurrentSeriesVideo = styled.div`
     height: 100%;
   }
 `
+
+const PlayListId = 'PLzIu1DkkWpWyG4hhL1sd4AATT9qiNxDEx'
 
 const CurrentSeries = () => {
   const data = useStaticQuery(graphql`
@@ -92,7 +92,7 @@ const CurrentSeries = () => {
           <CurrentSeriesVideo>
             <div className="videoContainer">
               <iframe
-                src="https://www.youtube.com/embed/videoseries?list=PLzIu1DkkWpWw6UhOfdGQ1WHHSgSf69u3x"
+                src={`https://www.youtube.com/embed/videoseries?list=${PlayListId}`}
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
