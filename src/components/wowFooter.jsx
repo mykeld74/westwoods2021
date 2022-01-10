@@ -3,6 +3,8 @@ import Styled from 'styled-components'
 import { Link } from 'gatsby'
 
 const StyledP = Styled.p`
+  font-size: clamp(20px, 3vw, 30px);
+  font-weight: 700;
   margin: 0 0 5px 20px;
   `
 

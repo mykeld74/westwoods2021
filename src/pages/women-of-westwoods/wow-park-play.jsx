@@ -70,7 +70,7 @@ const WomenOfWestwoods = () => {
               <span>Weather Permitting</span>
             </h3>
 
-            <ul className="left">
+            {/* <ul className="left">
               <li>10/13 -- Lakewood Park</li>
               <li>
                 10/27 -- Front Porch Coffee (playground on the north side of the
@@ -78,7 +78,7 @@ const WomenOfWestwoods = () => {
               </li>
               <li>11/10 -- Carmody</li>
               <li>12/8 -- Front Porch Coffee</li>
-            </ul>
+            </ul> */}
 
             <p>
               Park outings are from 9:30-11:00 and are lead by Sarah Brooks. For
