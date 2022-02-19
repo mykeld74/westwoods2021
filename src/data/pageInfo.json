@@ -192,6 +192,10 @@
   ],
   "programs": [
     {
+      "date": "02-20-22",
+      "location": "../Program-02-20-22.pdf"
+    },
+    {
       "date": "02-13-22",
       "location": "../Program-02-13-22.pdf"
     },
@@ -202,10 +206,6 @@
     {
       "date": "01-30-22",
       "location": "../Program-01-30-22.pdf"
-    },
-    {
-      "date": "01-23-22",
-      "location": "../Program-01-23-22.pdf"
     }
   ]
 }
