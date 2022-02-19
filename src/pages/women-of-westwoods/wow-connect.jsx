@@ -97,7 +97,7 @@ const WomenOfWestwoods = () => {
             <h3>WoW Connect</h3>
             <h4>
               Because supportive social relationships are essential to human
-              thriving!{' '}
+              thriving!
             </h4>
             <p>
               Once a month we will create a space to gather as women to build
@@ -105,17 +105,14 @@ const WomenOfWestwoods = () => {
               Westwoods Community Church. Upcoming dates are:
             </p>
             <p>
-              Join us Tuesday, <strong>January 18th at 6:30</strong> for our
-              night of testimony. We will be carving out space for connection,
-              reflection and celebration as we enter the new year.
+              Please join us Saturday, March 12th as we participate in Westwoods
+              Serve our City day. We will meet at the church a 9:00 am and
+              disburse to various project sites, we'll wrap up around 11:30. See
+              you there.
             </p>
             <p>
-              Then save the date for our next two opportunities to connect:
-              <br />
-              <strong>Tuesday, Feb 15th at 6:30</strong> will be game night!{' '}
-              <br />
-              <strong> Saturday, March 12th</strong> will be our IF: Gathering
-              conference. You won't want to miss!
+              We will be participating in the IF Gathering in April, more
+              details to come.
             </p>
           </TextContainer>
         </Container>
