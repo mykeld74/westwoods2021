@@ -47,7 +47,9 @@ const WowLink = Styled.div`
 
 const WowFooter = () => (
   <>
-    <StyledP>Click on any of the links below to learn more:</StyledP>
+    <StyledP>
+      Please See Clickable Links In the banner below to learn more:
+    </StyledP>
     <WowFooterContainer>
       <WowLink>
         <Link to="/women-of-westwoods">

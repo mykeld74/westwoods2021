@@ -16,6 +16,9 @@ const TextContainer = styled.div`
   h3 {
     margin: 0;
   }
+  h3 {
+    margin-top: 2vh;
+  }
   p {
     margin: 2vh 0 0;
     line-height: 1.3;
@@ -104,16 +107,19 @@ const WomenOfWestwoods = () => {
               community around a different topic. All gatherings will be held at
               Westwoods Community Church. Upcoming dates are:
             </p>
+            <h3>March 12th - All Church Service Day</h3>
             <p>
-              Please join us Saturday, March 12th as we participate in Westwoods
-              Serve our City day. We will meet at the church a 9:00 am and
-              disburse to various project sites, we'll wrap up around 11:30. See
-              you there.
+              Join us as we gather and work in our church and community.Service
+              activities for your entire family, 9AM - 11:30 AM at Westwoods.
             </p>
+            <h3>April 9th - IF:Gathering Conference</h3>
             <p>
-              We will be participating in the IF Gathering in April, more
-              details to come.
+              (What is IF:Gathering? It is a one day conference to Gather, Equip
+              and Unleash. We’re going to remind each other that God is
+              victorious over the mountains, walls, lies, and shadows we face.
+              Come be a part!)
             </p>
+            <h3>May 17th - WoW Connect Night. Watch for details!</h3>
           </TextContainer>
         </Container>
       </Section>
